@@ -115,7 +115,7 @@
     <form id="loginForm" onsubmit="handleLoginSubmit(event)">
       <div class="form-group">
         <label class="form-label" for="loginUsername">اسم المستخدم أو رقم الهاتف:</label>
-        <input type="text" id="loginUsername" class="form-input" placeholder="aboudi أو عبودي أو رقم هاتفك (01227208589)" required autocomplete="username" autofocus />
+        <input type="text" id="loginUsername" class="form-input" placeholder="اسم المستخدم أو الهاتف" required autocomplete="username" autofocus />
       </div>
 
       <div class="form-group">
@@ -128,12 +128,6 @@
         <span>🔐</span>
       </button>
     </form>
-
-    <div class="credential-hint-box">
-      <div style="font-weight:700; color:var(--rooh-dark); margin-bottom:4px;">🔑 بيانات الدخول:</div>
-      <div>• <strong>المدير العام والمالك (عبدالرحمن):</strong> اسم المستخدم <code>aboudi</code> أو <code>عبودي</code> أو <code>01227208589</code></div>
-      <div>• <strong>كلمة المرور:</strong> <code>Aboudi@2026</code> أو <code>admin</code> أو <code>123456</code> أو <code>aboudi</code></div>
-    </div>
 
     <div style="margin-top:24px; padding-top:16px; border-top:1px solid var(--rooh-sand); font-size:0.85rem;">
       <a id="backToStoreLink" href="index.html" style="color:var(--rooh-gold); font-weight:700;">← العودة للمتجر الرئيسي (Souq ROOH)</a>
@@ -158,6 +152,11 @@
       errBox.style.display = 'none';
       btn.disabled = true;
       btn.innerHTML = '<span>جاري التحقق من الصلاحيات...</span>';
+
+      // Safety guard: ensure window.roohDB is always initialized
+      if (!window.roohDB && typeof RoohDatabase !== 'undefined') {
+        window.roohDB = new RoohDatabase();
+      }
 
       try {
         const result = await window.roohDB.login(userEl.value, passEl.value);

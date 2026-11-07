@@ -856,27 +856,6 @@ class RoohDatabase {
     throw new Error('اسم المستخدم أو كلمة المرور غير صحيحة!');
   }
 
-    // 3. If running via HTTP, try remote server as final check
-    if (typeof window !== 'undefined' && window.location.protocol.startsWith('http')) {
-      try {
-        const res = await fetch(`${this.apiBase}/api/auth/login`, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ username, password })
-        });
-        if (res.ok) {
-          const data = await res.json();
-          localStorage.setItem('rooh_auth_user', JSON.stringify(data.user));
-          localStorage.setItem('rooh_auth_token', data.token);
-          return data;
-        }
-      } catch (netErr) {}
-    }
-
-    // 4. Default: User not found or invalid password
-    throw new Error('اسم المستخدم أو كلمة المرور غير صحيحة! تأكد من كتابة البيانات بدقة.');
-  }
-
   getCurrentUser() {
     try {
       const raw = localStorage.getItem('rooh_auth_user');

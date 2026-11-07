@@ -587,7 +587,258 @@ window.ROOH_SEED_DATA = {
       }
     ]
   },
-  "orders": [],
+  "orders": [
+    {
+      "id": "ROOH-2026-1004",
+      "order_number": "1004",
+      "date": "2026-11-04T22:54:44.140Z",
+      "customer": {
+        "id": "CUST-4140",
+        "name": "نور الهدى",
+        "phone": "01012345678",
+        "email": "nour@example.com",
+        "governorate": "الإسكندرية",
+        "zone": "",
+        "address": "محطة الرمل، شارع سعد زغلول"
+      },
+      "items": [
+        {
+          "product_id": "ROOH-SK-001",
+          "name": "سيروم النضارة الملكي بالفيتامين C والورد الجوري",
+          "sku": "ROOH-GLOW-30ML",
+          "qty": 2,
+          "unit_price": 380,
+          "unit_cost": 115,
+          "total_price": 760,
+          "total_cost": 230,
+          "customization": null
+        }
+      ],
+      "subtotal": 760,
+      "discount": 0,
+      "shipping_fee": 0,
+      "total_amount": 760,
+      "cogs_total": 230,
+      "gross_profit": 530,
+      "payment_method": "InstaPay",
+      "payment_status": "Paid",
+      "payment_reference": "IP-99887766",
+      "order_status": "New",
+      "delivery_zone": "الإسكندرية",
+      "assigned_employee": "عبدالرحمن",
+      "internal_notes": "طلب فحص الآلية",
+      "timeline": [
+        {
+          "status": "New",
+          "time": "2026-11-04T22:54:44.142Z",
+          "note": "تم إنشاء الطلب بنجاح في المنظومة"
+        }
+      ]
+    },
+    {
+      "id": "ROOH-2026-1001",
+      "order_number": "1001",
+      "date": "2026-11-01T14:32:00Z",
+      "customer": {
+        "id": "CUST-001",
+        "name": "سارة أحمد النجار",
+        "phone": "01098765432",
+        "email": "sara.alnaggar@gmail.com",
+        "governorate": "القاهرة",
+        "address": "عمارة 14، شارع النصر، المعادي، القاهرة"
+      },
+      "items": [
+        {
+          "product_id": "ROOH-SK-001",
+          "name": "سيروم النضارة الملكي بالفيتامين C والورد الجوري",
+          "sku": "ROOH-GLOW-30ML",
+          "qty": 1,
+          "unit_price": 380,
+          "unit_cost": 115,
+          "total_price": 380,
+          "total_cost": 115,
+          "customization": null
+        },
+        {
+          "product_id": "ROOH-SK-002",
+          "name": "كريم الترطيب العميق بالسيراميد وحمض الهيالورونيك",
+          "sku": "ROOH-MOIST-50ML",
+          "qty": 1,
+          "unit_price": 320,
+          "unit_cost": 95,
+          "total_price": 320,
+          "total_cost": 95,
+          "customization": null
+        }
+      ],
+      "subtotal": 700,
+      "discount": 0,
+      "shipping_fee": 45,
+      "total_amount": 745,
+      "cogs_total": 210,
+      "gross_profit": 490,
+      "profit_margin": 70,
+      "payment_method": "InstaPay",
+      "payment_status": "Paid",
+      "payment_reference": "IP-EG-98421894",
+      "order_status": "Processing",
+      "delivery_zone": "القاهرة الكبرى",
+      "assigned_employee": "أحمد محمود - مدير الطلبات",
+      "internal_notes": "العميلة طلبت تغليف هدية شريطة ذهبية فاخرة.",
+      "timeline": [
+        {
+          "status": "New",
+          "time": "2026-11-01T14:32:00Z",
+          "note": "تم إنشاء الطلب عبر متجر سوق روح"
+        },
+        {
+          "status": "Confirmed",
+          "time": "2026-11-01T15:00:00Z",
+          "note": "تم التحقق من تحويل إنستاباي بنجاح"
+        },
+        {
+          "status": "Processing",
+          "time": "2026-11-01T16:15:00Z",
+          "note": "الطلب قيد التجهيز والتغليف في المستودع"
+        }
+      ]
+    },
+    {
+      "id": "ROOH-2026-1002",
+      "order_number": "1002",
+      "date": "2026-11-02T10:15:00Z",
+      "customer": {
+        "id": "CUST-002",
+        "name": "مروة عبد المنعم",
+        "phone": "01123456789",
+        "email": "marwa.moniem@outlook.com",
+        "governorate": "الجيزة",
+        "address": "فيلا 8، حي الأشجار، مدينة 6 أكتوبر، الجيزة"
+      },
+      "items": [
+        {
+          "product_id": "CUSTOM-ROOH-991",
+          "name": "مستحضر مخصص: سيروم نضارة ندى الخاص",
+          "sku": "ROOH-CUST-SERUM",
+          "qty": 1,
+          "unit_price": 420,
+          "unit_cost": 125,
+          "total_price": 420,
+          "total_cost": 125,
+          "customization": {
+            "type": "Facial Serum",
+            "base": "قاعدة الهيالورونيك والطحالب البحرية المتطورة",
+            "actives": [
+              "فيتامين C النقي 15%",
+              "ببتيدات الكولاجين البحري"
+            ],
+            "fragrance": "الورد الجوري الملكي",
+            "size": "50ml",
+            "packaging": "مضخة عاجية فاخرة مانعة لدخول الهواء",
+            "custom_label": "سيروم إشراقة ندى الملكي"
+          }
+        }
+      ],
+      "subtotal": 420,
+      "discount": 0,
+      "shipping_fee": 50,
+      "total_amount": 470,
+      "cogs_total": 125,
+      "gross_profit": 295,
+      "profit_margin": 70.2,
+      "payment_method": "Vodafone Cash",
+      "payment_status": "Paid",
+      "payment_reference": "VF-90481231",
+      "order_status": "Ready for shipping",
+      "delivery_zone": "الجيزة وأكتوبر",
+      "assigned_employee": "أحمد محمود - مدير الطلبات",
+      "internal_notes": "تم تحضير التركيبة المعملية بنجاح واعتمادها من كيميائي المعمل.",
+      "timeline": [
+        {
+          "status": "New",
+          "time": "2026-11-02T10:15:00Z",
+          "note": "طلب مخصص من مختبر ابتكار روح"
+        },
+        {
+          "status": "Confirmed",
+          "time": "2026-11-02T10:45:00Z",
+          "note": "تأكيد إيداع فودافون كاش ومراجعة المحفظة"
+        },
+        {
+          "status": "Processing",
+          "time": "2026-11-02T11:30:00Z",
+          "note": "تم خلط المكونات وتعبئة العبوة وطباعة الملصق الخاص"
+        },
+        {
+          "status": "Ready for shipping",
+          "time": "2026-11-02T16:00:00Z",
+          "note": "جاهز لتسليم مندوب شركة بوسطة للشحن"
+        }
+      ]
+    },
+    {
+      "id": "ROOH-2026-1003",
+      "order_number": "1003",
+      "date": "2026-11-02T12:40:00Z",
+      "customer": {
+        "id": "CUST-003",
+        "name": "محمود إبراهيم الشناوي",
+        "phone": "01233445566",
+        "email": "m.elshinawy@yahoo.com",
+        "governorate": "الإسكندرية",
+        "address": "45 طريق الجيش، سيدي جابر، الإسكندرية"
+      },
+      "items": [
+        {
+          "product_id": "ROOH-PF-001",
+          "name": "عطر 'روح العنبر الملكي' - أو دو بارفان نيش 100 مل",
+          "sku": "ROOH-PERF-100ML",
+          "qty": 1,
+          "unit_price": 850,
+          "unit_cost": 240,
+          "total_price": 850,
+          "total_cost": 240,
+          "customization": null
+        }
+      ],
+      "subtotal": 850,
+      "discount": 0,
+      "shipping_fee": 0,
+      "total_amount": 850,
+      "cogs_total": 240,
+      "gross_profit": 610,
+      "profit_margin": 71.76,
+      "payment_method": "Cash on Delivery",
+      "payment_status": "Unpaid",
+      "payment_reference": "COD-PENDING",
+      "order_status": "Shipped",
+      "delivery_zone": "الإسكندرية والساحل",
+      "assigned_employee": "أحمد محمود - مدير الطلبات",
+      "internal_notes": "شحن مجاني لأن الطلب تخطى 750 ج.م.",
+      "timeline": [
+        {
+          "status": "New",
+          "time": "2026-11-02T12:40:00Z",
+          "note": "طلب دفع عند الاستلام جديد"
+        },
+        {
+          "status": "Confirmed",
+          "time": "2026-11-02T13:10:00Z",
+          "note": "تم تأكيد العنوان هاتفياً مع العميل"
+        },
+        {
+          "status": "Processing",
+          "time": "2026-11-02T14:00:00Z",
+          "note": "تجهيز العطر مع بطاقة إهداء فاخرة"
+        },
+        {
+          "status": "Shipped",
+          "time": "2026-11-02T17:30:00Z",
+          "note": "تم تسليم الشحنة لشركة بوسطة بوليصة رقم BST-EG-893012"
+        }
+      ]
+    }
+  ],
   "chart_of_accounts": [
     {
       "code": "1010",
@@ -595,7 +846,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Cash on Hand",
       "type": "Asset",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 24500
     },
     {
       "code": "1020",
@@ -603,7 +854,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Bank & Electronic Wallets",
       "type": "Asset",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 68420
     },
     {
       "code": "1100",
@@ -611,7 +862,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Accounts Receivable",
       "type": "Asset",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 4850
     },
     {
       "code": "1200",
@@ -619,7 +870,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Finished Cosmetics Inventory",
       "type": "Asset",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 184500
     },
     {
       "code": "1250",
@@ -627,7 +878,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Raw Materials & Packaging Inventory",
       "type": "Asset",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 92300
     },
     {
       "code": "2010",
@@ -635,7 +886,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Accounts Payable",
       "type": "Liability",
       "normal_balance": "Credit",
-      "balance": 0
+      "balance": 31200
     },
     {
       "code": "3010",
@@ -643,7 +894,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Owner Equity - Abdulrahman",
       "type": "Equity",
       "normal_balance": "Credit",
-      "balance": 0
+      "balance": 300000
     },
     {
       "code": "3020",
@@ -651,7 +902,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Retained Earnings",
       "type": "Equity",
       "normal_balance": "Credit",
-      "balance": 0
+      "balance": 43370
     },
     {
       "code": "4010",
@@ -659,7 +910,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Store Sales Revenue",
       "type": "Revenue",
       "normal_balance": "Credit",
-      "balance": 0
+      "balance": 154200
     },
     {
       "code": "4020",
@@ -667,7 +918,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Custom Product Revenue",
       "type": "Revenue",
       "normal_balance": "Credit",
-      "balance": 0
+      "balance": 38400
     },
     {
       "code": "4030",
@@ -675,7 +926,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Shipping Revenue",
       "type": "Revenue",
       "normal_balance": "Credit",
-      "balance": 0
+      "balance": 8650
     },
     {
       "code": "5010",
@@ -683,7 +934,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Cost of Goods Sold - Products",
       "type": "COGS",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 52400
     },
     {
       "code": "5020",
@@ -691,7 +942,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Packaging COGS",
       "type": "COGS",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 14200
     },
     {
       "code": "6010",
@@ -699,7 +950,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Shipping Partner Expenses",
       "type": "Expense",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 7800
     },
     {
       "code": "6020",
@@ -707,7 +958,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Marketing & Ads",
       "type": "Expense",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 16500
     },
     {
       "code": "6030",
@@ -715,7 +966,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Salaries & Wages",
       "type": "Expense",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 22000
     },
     {
       "code": "6040",
@@ -723,7 +974,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Rent & Facilities",
       "type": "Expense",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 15000
     },
     {
       "code": "6050",
@@ -731,7 +982,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Utilities & Internet",
       "type": "Expense",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 3400
     },
     {
       "code": "6060",
@@ -739,7 +990,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Software & Subscriptions",
       "type": "Expense",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 2800
     },
     {
       "code": "6070",
@@ -747,7 +998,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Packaging Supplies",
       "type": "Expense",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 4100
     },
     {
       "code": "6080",
@@ -755,7 +1006,7 @@ window.ROOH_SEED_DATA = {
       "name_en": "Maintenance & Office",
       "type": "Expense",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 1950
     },
     {
       "code": "6090",
@@ -763,16 +1014,373 @@ window.ROOH_SEED_DATA = {
       "name_en": "Other Miscellaneous Expenses",
       "type": "Expense",
       "normal_balance": "Debit",
-      "balance": 0
+      "balance": 1420
     }
   ],
-  "journal_entries": [],
-  "expenses": [],
-  "income_transactions": [],
-  "inventory_movements": [],
-  "suppliers": [],
-  "purchases": [],
-  "customers": [],
+  "journal_entries": [
+    {
+      "id": "JE-2026-001",
+      "entry_number": "JE-001",
+      "date": "2026-11-01T14:35:00Z",
+      "description": "قيد مبيعات الطلب رقم 1001 (إنستاباي) وإثبات تكلفة البضاعة المباعة",
+      "ref_type": "Order",
+      "ref_id": "ROOH-2026-1001",
+      "lines": [
+        {
+          "account_code": "1020",
+          "account_name": "المحافظ الإلكترونية والحسابات البنكية",
+          "debit": 745,
+          "credit": 0
+        },
+        {
+          "account_code": "4010",
+          "account_name": "إيرادات مبيعات المتجر الإلكتروني",
+          "debit": 0,
+          "credit": 700
+        },
+        {
+          "account_code": "4030",
+          "account_name": "إيرادات رسوم الشحن والتوصيل",
+          "debit": 0,
+          "credit": 45
+        },
+        {
+          "account_code": "5010",
+          "account_name": "تكلفة البضاعة المباعة - مستحضرات التجميل",
+          "debit": 210,
+          "credit": 0
+        },
+        {
+          "account_code": "1200",
+          "account_name": "مخزون المنتجات التجميلية الجاهزة",
+          "debit": 0,
+          "credit": 210
+        }
+      ],
+      "total_debit": 955,
+      "total_credit": 955,
+      "balanced": true
+    },
+    {
+      "id": "JE-2026-002",
+      "entry_number": "JE-002",
+      "date": "2026-11-02T10:48:00Z",
+      "description": "قيد مبيعات الطلب المخصص رقم 1002 (فودافون كاش) وإثبات تكلفة المواد والعبوة",
+      "ref_type": "Order",
+      "ref_id": "ROOH-2026-1002",
+      "lines": [
+        {
+          "account_code": "1020",
+          "account_name": "المحافظ الإلكترونية والحسابات البنكية",
+          "debit": 470,
+          "credit": 0
+        },
+        {
+          "account_code": "4020",
+          "account_name": "إيرادات المنتجات المخصصة (المختبر)",
+          "debit": 0,
+          "credit": 420
+        },
+        {
+          "account_code": "4030",
+          "account_name": "إيرادات رسوم الشحن والتوصيل",
+          "debit": 0,
+          "credit": 50
+        },
+        {
+          "account_code": "5010",
+          "account_name": "تكلفة البضاعة المباعة - مستحضرات التجميل",
+          "debit": 125,
+          "credit": 0
+        },
+        {
+          "account_code": "1250",
+          "account_name": "مخزون المواد الخام والعبوات والتغليف",
+          "debit": 0,
+          "credit": 125
+        }
+      ],
+      "total_debit": 595,
+      "total_credit": 595,
+      "balanced": true
+    },
+    {
+      "id": "JE-2026-003",
+      "entry_number": "JE-003",
+      "date": "2026-11-02T12:45:00Z",
+      "description": "قيد إثبات شحن طلب رقم 1003 ذمم مدينة (دفع عند الاستلام لم يحصل بعد)",
+      "ref_type": "Order",
+      "ref_id": "ROOH-2026-1003",
+      "lines": [
+        {
+          "account_code": "1100",
+          "account_name": "حسابات العملاء والمدينون",
+          "debit": 850,
+          "credit": 0
+        },
+        {
+          "account_code": "4010",
+          "account_name": "إيرادات مبيعات المتجر الإلكتروني",
+          "debit": 0,
+          "credit": 850
+        },
+        {
+          "account_code": "5010",
+          "account_name": "تكلفة البضاعة المباعة - مستحضرات التجميل",
+          "debit": 240,
+          "credit": 0
+        },
+        {
+          "account_code": "1200",
+          "account_name": "مخزون المنتجات التجميلية الجاهزة",
+          "debit": 0,
+          "credit": 240
+        }
+      ],
+      "total_debit": 1090,
+      "total_credit": 1090,
+      "balanced": true
+    }
+  ],
+  "expenses": [
+    {
+      "id": "EXP-2026-001",
+      "description": "شراء عبوات زجاجية فاخرة وقطارات ذهبية من شركة الأهرام للتغليف",
+      "category": "Packaging",
+      "category_ar": "التعبئة والتغليف",
+      "amount": 4500,
+      "date": "2026-11-01",
+      "payment_method": "InstaPay",
+      "recipient": "شركة الأهرام للتغليف والزجاج",
+      "notes": "دفعة توريد 1000 زجاجة عسلية سعة 30 و 50 مل مع قطارات ومضخات",
+      "receipt_attachment": "receipt_packaging_001.pdf",
+      "created_by": "عبدالرحمن (المالك)"
+    },
+    {
+      "id": "EXP-2026-002",
+      "description": "حملة إعلانات ممولة على إنستغرام وتيك توك لإطلاق عطر روح العنبر",
+      "category": "Marketing",
+      "category_ar": "التسويق والإعلانات",
+      "amount": 3200,
+      "date": "2026-11-01",
+      "payment_method": "Credit Card",
+      "recipient": "Meta Ads & TikTok Ads",
+      "notes": "استهداف مهتمين بالعطور ومستحضرات العناية بالقاهرة والإسكندرية",
+      "receipt_attachment": "meta_invoice_nov.pdf",
+      "created_by": "سارة - مديرة التسويق"
+    },
+    {
+      "id": "EXP-2026-003",
+      "description": "سداد فواتير شحن شهرية مستحقة لشركة بوسطة للشحن السريع",
+      "category": "Shipping",
+      "category_ar": "الشحن والتوصيل",
+      "amount": 2850,
+      "date": "2026-11-02",
+      "payment_method": "Vodafone Cash",
+      "recipient": "شركة بوسطة مصر للتوصيل",
+      "notes": "تسوية شحنات الأسبوع الأخير لجميع المحافظات",
+      "receipt_attachment": "bosta_statement_oct.pdf",
+      "created_by": "أحمد محمود - مدير العمليات"
+    },
+    {
+      "id": "EXP-2026-004",
+      "description": "شراء خامات طبيعية: فيتامين سي نقي، نياسيناميد، وهيدروسول الورد من معامل القاهرة",
+      "category": "Raw materials",
+      "category_ar": "المواد الخام",
+      "amount": 6200,
+      "date": "2026-10-30",
+      "payment_method": "Bank Transfer",
+      "recipient": "معامل القاهرة للمستخلصات النباتية",
+      "notes": "شهادات التحليل المعملي والنقاء مرفقة مع الفاتورة",
+      "receipt_attachment": "lab_cert_materials.pdf",
+      "created_by": "عبدالرحمن (المالك)"
+    }
+  ],
+  "income_transactions": [
+    {
+      "id": "TXN-884142",
+      "date": "2026-11-04T22:54:44.142Z",
+      "type": "Store Sale",
+      "type_ar": "مبيعات المتجر الإلكتروني",
+      "amount": 760,
+      "method": "InstaPay",
+      "reference": "IP-99887766",
+      "order_id": "ROOH-2026-1004",
+      "status": "Confirmed",
+      "notes": "تحصيل قيمة الطلب رقم #1004"
+    },
+    {
+      "id": "TXN-2026-101",
+      "date": "2026-11-01T14:34:00Z",
+      "type": "Store Sale",
+      "type_ar": "مبيعات المتجر",
+      "amount": 745,
+      "method": "InstaPay",
+      "reference": "IP-EG-98421894",
+      "order_id": "ROOH-2026-1001",
+      "status": "Confirmed",
+      "notes": "تحويل فوري عبر تطبيق إنستاباي تم تأكيده مع كشف الحساب"
+    },
+    {
+      "id": "TXN-2026-102",
+      "date": "2026-11-02T10:46:00Z",
+      "type": "Custom Lab Sale",
+      "type_ar": "مبيعات المختبر المخصص",
+      "amount": 470,
+      "method": "Vodafone Cash",
+      "reference": "VF-90481231",
+      "order_id": "ROOH-2026-1002",
+      "status": "Confirmed",
+      "notes": "تحويل محفظة فودافون كاش على رقم الشركة 01227208589"
+    }
+  ],
+  "inventory_movements": [
+    {
+      "id": "MOV-001",
+      "date": "2026-11-01T14:35:00Z",
+      "product_id": "ROOH-SK-001",
+      "product_name": "سيروم النضارة الملكي بالفيتامين C والورد الجوري",
+      "type": "Sale Deduction",
+      "qty_change": -1,
+      "reason": "خصم تلقائي لتنفيذ الطلب رقم ROOH-2026-1001",
+      "user": "النظام الآلي"
+    },
+    {
+      "id": "MOV-002",
+      "date": "2026-11-01T14:35:00Z",
+      "product_id": "ROOH-SK-002",
+      "product_name": "كريم الترطيب العميق بالسيراميد وحمض الهيالورونيك",
+      "type": "Sale Deduction",
+      "qty_change": -1,
+      "reason": "خصم تلقائي لتنفيذ الطلب رقم ROOH-2026-1001",
+      "user": "النظام الآلي"
+    },
+    {
+      "id": "MOV-003",
+      "date": "2026-11-02T12:45:00Z",
+      "product_id": "ROOH-PF-001",
+      "product_name": "عطر 'روح العنبر الملكي' - أو دو بارفان نيش 100 مل",
+      "type": "Sale Deduction",
+      "qty_change": -1,
+      "reason": "خصم لتنفيذ وشحن الطلب رقم ROOH-2026-1003",
+      "user": "أحمد محمود"
+    },
+    {
+      "id": "MOV-884140",
+      "date": "2026-11-04T22:54:44.140Z",
+      "product_id": "ROOH-SK-001",
+      "product_name": "سيروم النضارة الملكي بالفيتامين C والورد الجوري",
+      "type": "Sale Deduction",
+      "qty_change": -2,
+      "reason": "خصم بيع لتنفيذ الطلب #1004",
+      "user": "النظام الآلي"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "SUP-001",
+      "name": "شركة الأهرام للتغليف والزجاج الدوائي",
+      "contact_person": "م. طارق العشري",
+      "phone": "01001234567",
+      "email": "tarek@ahram-packaging.com",
+      "category": "عبوات وزجاج وقطارات",
+      "total_purchases": 54000,
+      "balance_owed": 12500,
+      "payment_terms": "30 يوماً من تاريخ الفاتورة"
+    },
+    {
+      "id": "SUP-002",
+      "name": "معامل القاهرة للمستخلصات والزيوت الطبيعية",
+      "contact_person": "د. هدى منصور",
+      "phone": "01112233445",
+      "email": "dr.hoda@cairo-botanicals.com",
+      "category": "زيوت نباتية ومواد فعالة نقية",
+      "total_purchases": 88000,
+      "balance_owed": 18700,
+      "payment_terms": "دفع 50% مقدماً والباقي عند الاستلام"
+    }
+  ],
+  "purchases": [
+    {
+      "id": "PO-2026-001",
+      "supplier_id": "SUP-001",
+      "supplier_name": "شركة الأهرام للتغليف والزجاج الدوائي",
+      "date": "2026-10-25",
+      "total_amount": 18000,
+      "paid_amount": 12000,
+      "remaining_amount": 6000,
+      "status": "Received",
+      "items": "500 زجاجة عسلية قطارة + 500 مضخة عاجية + كراتين شحن فاخرة"
+    }
+  ],
+  "customers": [
+    {
+      "id": "CUST-001",
+      "name": "سارة أحمد النجار",
+      "phone": "01098765432",
+      "email": "sara.alnaggar@gmail.com",
+      "governorate": "القاهرة",
+      "address": "عمارة 14، شارع النصر، المعادي",
+      "registration_date": "2026-09-12",
+      "total_orders": 4,
+      "total_purchases": 2680,
+      "total_payments": 2680,
+      "outstanding_balance": 0,
+      "refund_history": 0,
+      "last_order_date": "2026-11-01",
+      "tag": "VIP",
+      "notes": "عميلة مميزة تفضل سيروم فيتامين سي وتطلب تغليف هدايا دائماً"
+    },
+    {
+      "id": "CUST-002",
+      "name": "مروة عبد المنعم",
+      "phone": "01123456789",
+      "email": "marwa.moniem@outlook.com",
+      "governorate": "الجيزة",
+      "address": "فيلا 8، حي الأشجار، 6 أكتوبر",
+      "registration_date": "2026-10-05",
+      "total_orders": 2,
+      "total_purchases": 980,
+      "total_payments": 980,
+      "outstanding_balance": 0,
+      "refund_history": 0,
+      "last_order_date": "2026-11-02",
+      "tag": "Returning",
+      "notes": "مهتمة بمنتجات العناية بالبشرة المخصصة والمختبر"
+    },
+    {
+      "id": "CUST-003",
+      "name": "محمود إبراهيم الشناوي",
+      "phone": "01233445566",
+      "email": "m.elshinawy@yahoo.com",
+      "governorate": "الإسكندرية",
+      "address": "45 طريق الجيش، سيدي جابر",
+      "registration_date": "2026-11-02",
+      "total_orders": 1,
+      "total_purchases": 850,
+      "total_payments": 0,
+      "outstanding_balance": 850,
+      "refund_history": 0,
+      "last_order_date": "2026-11-02",
+      "tag": "New",
+      "notes": "طلب عطر روح العنبر الملكي دفع عند الاستلام الشحنة في الطريق"
+    },
+    {
+      "id": "CUST-4140",
+      "name": "نور الهدى",
+      "phone": "01012345678",
+      "email": "nour@example.com",
+      "governorate": "الإسكندرية",
+      "address": "محطة الرمل، شارع سعد زغلول",
+      "registration_date": "2026-11-04",
+      "total_orders": 1,
+      "total_purchases": 760,
+      "total_payments": 760,
+      "outstanding_balance": 0,
+      "last_order_date": "2026-11-04",
+      "tag": "New"
+    }
+  ],
   "shipping_zones": [
     {
       "id": "gov_01",
@@ -1148,35 +1756,56 @@ window.ROOH_SEED_DATA = {
       ]
     }
   ],
-  "complaints": [],
+  "complaints": [
+    {
+      "id": "CMP-2026-001",
+      "customer_name": "ندى حسن البدري",
+      "phone": "01055667788",
+      "order_number": "1001",
+      "category": "استفسار عن طريقة الاستخدام",
+      "details": "أريد معرفة هل يمكنني استخدام سيروم فيتامين سي صباحاً قبل التعرض للشمس؟",
+      "submission_date": "2026-11-02T11:00:00Z",
+      "status": "Resolved",
+      "resolution_notes": "تم التواصل هاتفياً من قبل أخصائية العناية، وتوضيح ضرورة استخدام واقي شمس SPF 50+ بعد السيروم لحماية البشرة.",
+      "assigned_to": "عبدالرحمن (المالك)"
+    }
+  ],
   "reviews": [
     {
-      "id": "REV-101",
-      "customer_name": "مريم أحمد",
+      "id": "REV-001",
+      "product_id": "ROOH-SK-001",
+      "customer_name": "د. ميار مصطفى",
       "rating": 5,
-      "title": "سيروم النضارة الملكي يستحق كل قرش",
-      "comment": "بصراحة المنتج غير شكل بشرتي تماماً خلال أسبوعين.. إشراقة طبيعية وترطيب رائع جداً!",
-      "reply": "أهلاً بكِ أختي مريم في عائلة روح، نسعد دائماً برضاكِ وثقتكِ الغالية 🌸",
+      "title": "سيروم يفوق البراندات العالمية بمراحل!",
+      "comment": "استخدمت سيرومات فيتامين سي من أشهر الماركات الفرنسية، لكن تركيبة روح تميزت بسرعة الامتصاص والنعومة الفائقة بدون أي تحسس. أثر النضارة ظهر في أسبوع واحد فقط!",
       "verified_purchase": true,
-      "location": "القاهرة - المعادي",
-      "product_id": "PRD-001",
-      "product_name_ar": "سيروم النضارة الملكي بفيتامين C",
-      "date": "2026-11-05T15:05:36.108Z",
-      "status": "approved"
+      "status": "Approved",
+      "featured": true,
+      "date": "2026-10-28"
     },
     {
-      "id": "REV-102",
-      "customer_name": "نورهان السعيد",
+      "id": "REV-002",
+      "product_id": "ROOH-PF-001",
+      "customer_name": "إسلام رضوان",
       "rating": 5,
-      "title": "عطر روح العنبر ثباته جبار",
-      "comment": "ريحته فخمة جداً وكل ما أخرج يسألوني عنه.. شحن سريع وتغليف ملكي يشرف!",
-      "reply": "ذوقكِ الراقي هو سر تألق عطورنا.. شكراً لثقتك في روح الملكية ✨",
+      "title": "عطر فاخر وثبات أسطوري",
+      "comment": "عطر روح العنبر الملكي له بصمة فريدة وفوحان يملأ المكان. كل من حولي يسألني عن سر هذا العطر. فخور جداً بوجود منتج مصري بهذا المستوى الرفيع.",
       "verified_purchase": true,
-      "location": "الإسكندرية - سموحة",
-      "product_id": "PRD-003",
-      "product_name_ar": "عطر روح العنبر الملكي النيش",
-      "date": "2026-11-05T15:05:36.113Z",
-      "status": "approved"
+      "status": "Approved",
+      "featured": true,
+      "date": "2026-10-31"
+    },
+    {
+      "id": "REV-003",
+      "product_id": "CUSTOM-ROOH-991",
+      "customer_name": "ياسمين القاضي",
+      "rating": 5,
+      "title": "تجربة مختبر ابتكار روح ممتعة جداً",
+      "comment": "فكرة أن أختار بنفسي المكونات الفعالة المناسبة لبشرتي مع العطر الزهري والعبوة العاجية وكتبوا اسمي على الزجاجة! تجربة فخمة تشعرني بالخصوصية المطلقة.",
+      "verified_purchase": true,
+      "status": "Approved",
+      "featured": true,
+      "date": "2026-11-02"
     }
   ],
   "employees": [
@@ -1292,10 +1921,76 @@ window.ROOH_SEED_DATA = {
   ],
   "audit_logs": [
     {
-      "timestamp": "2026-11-05T15:05:36.113Z",
-      "user": "عبدالرحمن (المالك والمدير العام)",
-      "action": "SYSTEM_ZERO_START",
-      "details": "تم تصفير كافة الحسابات والطلبات والبيانات بنجاح لبدء أول معاملة واستلام أول جنيه على نظافة تامة."
+      "timestamp": "2026-11-05T00:24:44.434Z",
+      "user": "عبدالرحمن (عبودي)",
+      "action": "USER_LOGIN",
+      "details": "تسجيل دخول ناجح: عبدالرحمن (عبودي) (المالك والمدير العام (عبودي))"
+    },
+    {
+      "timestamp": "2026-11-05T00:23:54.474Z",
+      "user": "عبدالرحمن (عبودي)",
+      "action": "USER_LOGIN",
+      "details": "تسجيل دخول ناجح: عبدالرحمن (عبودي) (المالك والمدير العام (عبودي))"
+    },
+    {
+      "timestamp": "2026-11-04T22:54:29.974Z",
+      "user": "أحمد محمود",
+      "action": "USER_LOGIN",
+      "details": "تسجيل دخول ناجح: أحمد محمود (مساعد إدارة الطلبات والشحن)"
+    },
+    {
+      "timestamp": "2026-11-04T22:54:29.966Z",
+      "user": "عبدالرحمن (عبودي)",
+      "action": "USER_LOGIN",
+      "details": "تسجيل دخول ناجح: عبدالرحمن (عبودي) (المالك والمدير العام (عبودي))"
+    },
+    {
+      "timestamp": "2026-11-04T22:53:48.562Z",
+      "user": "أحمد محمود",
+      "action": "USER_LOGIN",
+      "details": "تسجيل دخول ناجح: أحمد محمود (مساعد إدارة الطلبات والشحن)"
+    },
+    {
+      "timestamp": "2026-11-04T22:53:48.551Z",
+      "user": "عبدالرحمن (عبودي)",
+      "action": "USER_LOGIN",
+      "details": "تسجيل دخول ناجح: عبدالرحمن (عبودي) (المالك والمدير العام (عبودي))"
+    },
+    {
+      "timestamp": "2026-11-04T22:52:51.677Z",
+      "user": "أحمد محمود",
+      "action": "USER_LOGIN",
+      "details": "تسجيل دخول ناجح: أحمد محمود (مساعد إدارة الطلبات والشحن)"
+    },
+    {
+      "timestamp": "2026-11-04T22:52:51.654Z",
+      "user": "عبدالرحمن (عبودي)",
+      "action": "USER_LOGIN",
+      "details": "تسجيل دخول ناجح: عبدالرحمن (عبودي) (المالك والمدير العام (عبودي))"
+    },
+    {
+      "timestamp": "2026-11-03T18:33:16.639Z",
+      "user": "كريم المساعد",
+      "action": "USER_LOGIN",
+      "details": "تسجيل دخول ناجح للمستخدم: كريم المساعد (Assistant)"
+    },
+    {
+      "timestamp": "2026-11-03T18:33:16.636Z",
+      "user": "عبدالرحمن (عبودي)",
+      "action": "CREATE_ASSISTANT_USER",
+      "details": "إضافة مستخدم مساعد جديد: كريم المساعد (اسم المستخدم: karim_helper)"
+    },
+    {
+      "timestamp": "2026-11-03T18:33:16.630Z",
+      "user": "عبدالرحمن (عبودي)",
+      "action": "USER_LOGIN",
+      "details": "تسجيل دخول ناجح للمستخدم: عبدالرحمن (عبودي) (Owner)"
+    },
+    {
+      "timestamp": "2026-11-02T19:00:00Z",
+      "user": "عبدالرحمن",
+      "action": "SYSTEM_INITIALIZE",
+      "details": "تم تهيئة قاعدة البيانات المركزية لمنظومة ROOH المتكاملة بنجاح"
     }
   ],
   "users": [
@@ -1313,7 +2008,7 @@ window.ROOH_SEED_DATA = {
       ],
       "status": "Active",
       "created_at": "2026-11-03T18:25:20.842Z",
-      "last_login": "2026-11-07T09:26:51.828Z"
+      "last_login": "2026-11-07T10:04:14.362Z"
     },
     {
       "id": "USR-002",
@@ -1799,17 +2494,35 @@ window.ROOH_SEED_DATA = {
     }
   },
   "team_meetings": {
-    "active_users": [
-      "USR-001"
+    "participants": [
+      {
+        "id": "USR-001",
+        "name": "عبدالرحمن",
+        "nickname": "المالك والمدير العام",
+        "avatar": "👑",
+        "status": "online",
+        "is_typing": false,
+        "can_chat": true,
+        "last_seen": "2026-11-04T22:28:59.029Z"
+      },
+      {
+        "id": "USR-002",
+        "name": "أحمد محمود",
+        "nickname": "إدارة الطلبات والشحن",
+        "avatar": "📦",
+        "status": "offline",
+        "is_typing": false,
+        "can_chat": true,
+        "last_seen": "2026-11-04T22:28:59.052Z"
+      }
     ],
     "messages": [
       {
         "id": "MSG-001",
         "sender_id": "USR-001",
         "sender_name": "عبدالرحمن (عبودي)",
-        "sender_role": "المالك والمدير العام",
-        "text": "بسم الله نبدأ العمل على نظافة تامة.. جاهزون لاستلام أول أوردر وخدمة عملائنا بأعلى مستوى!",
-        "timestamp": "2026-11-05T15:05:36.113Z"
+        "text": "مرحباً بفريق عمل روح، هذه غرفة الاجتماعات المركزية لمتابعة حركة المتجر والعمليات اليومية.",
+        "timestamp": "2026-11-04T22:28:59.052Z"
       }
     ]
   },
@@ -2078,40 +2791,46 @@ window.ROOH_SEED_DATA = {
     "api_rate_limit": "Active (100 req/min)",
     "file_upload_scanner": "Active (MIME & size whitelist)"
   },
-  "customer_users": [],
-  "customer_designs": [],
-  "vault": {
-    "balance": 0,
-    "gross_sales": 0,
-    "net_collected": 0,
-    "pending_amount": 0,
-    "total_refunds": 0,
-    "total_shipping_collected": 0,
-    "total_expenses": 0,
-    "gateways_breakdown": {
-      "instapay": {
-        "collected": 0,
-        "pending": 0,
-        "account": "abdelrahman@instapay"
-      },
-      "wallets": {
-        "collected": 0,
-        "pending": 0,
-        "phone": "01227208589"
-      },
-      "cards": {
-        "collected": 0,
-        "pending": 0,
-        "provider": "Paymob / Fawry"
-      },
-      "cod": {
-        "collected": 0,
-        "pending": 0,
-        "cash_in_transit": 0
-      }
+  "customer_users": [
+    {
+      "id": "CUST-71705",
+      "name": "هالة محمود",
+      "phone": "01032771703",
+      "email": "hala_1793832771703@gmail.com",
+      "password": "testpassword",
+      "governorate": "الإسكندرية",
+      "address": "سموحة، شارع فوزي معاذ",
+      "tier": "Regular",
+      "total_orders": 0,
+      "total_spent": 0,
+      "created_at": "2026-11-04T22:52:51.705Z"
     },
-    "transactions": []
-  },
-  "admin_ai_memory": [],
-  "admin_reminders": []
+    {
+      "id": "CUST-28582",
+      "name": "هالة محمود",
+      "phone": "01032828580",
+      "email": "hala_1793832828580@gmail.com",
+      "password": "testpassword",
+      "governorate": "الإسكندرية",
+      "address": "سموحة، شارع فوزي معاذ",
+      "tier": "Regular",
+      "total_orders": 0,
+      "total_spent": 0,
+      "created_at": "2026-11-04T22:53:48.582Z"
+    },
+    {
+      "id": "CUST-69989",
+      "name": "هالة محمود",
+      "phone": "01032869987",
+      "email": "hala_1793832869987@gmail.com",
+      "password": "testpassword",
+      "governorate": "الإسكندرية",
+      "address": "سموحة، شارع فوزي معاذ",
+      "tier": "Regular",
+      "total_orders": 0,
+      "total_spent": 0,
+      "created_at": "2026-11-04T22:54:29.989Z"
+    }
+  ],
+  "customer_designs": []
 };

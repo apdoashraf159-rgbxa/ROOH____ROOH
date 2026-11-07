@@ -16,6 +16,9 @@ class RoohAdmin {
   }
 
   async init() {
+    if (!window.roohDB && typeof RoohDatabase !== 'undefined') {
+      window.roohDB = new RoohDatabase();
+    }
     await window.roohDB.init();
     this.bindSidebar();
     this.handleRouting();
@@ -1406,7 +1409,6 @@ class RoohAdmin {
     } catch (err) {
       alert('فشل تسجيل الحركة في الخزنة');
     }
-  }
   }
 
   // =========================================================================

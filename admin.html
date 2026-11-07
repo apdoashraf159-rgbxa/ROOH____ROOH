@@ -264,6 +264,9 @@
     // inline scripts before deferred/async scripts finish parsing.
     // ============================================================
     function _roohInitAdminGuard() {
+      if (!window.roohDB && typeof RoohDatabase !== 'undefined') {
+        window.roohDB = new RoohDatabase();
+      }
       let user = window.roohDB?.getCurrentUser();
       if (!user) {
         try {
