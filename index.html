@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROOH – روح | المنظومة المتكاملة لمستحضرات التجميل الطبيعية الفاخرة</title>
+  <meta name="description"
+    content="روح – الموقع الرسمي وسوق روح لمستحضرات التجميل الملكية الطبيعية. عناية بالبشرة، شعر، عطور نيش، وتصنيع مخصص في مختبر روح. المالك: عبدالرحمن (01227208589).">
+  <!-- Luxury Styles -->
+  <link rel="stylesheet" href="css/rooh-luxury.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌸</text></svg>">
+</head>
+
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-announcement">
+    <span>✨ أهلاً بكم في <strong>روح (ROOH)</strong> – شحن مجاني لكافة محافظات جمهورية مصر العربية للطلبات فوق <span
+        class="highlight">750 ج.م</span> | للتواصل المباشر مع الإدارة: <span class="highlight">01227208589</span></span>
+  </div>
+
+  <!-- Main Luxury Header -->
+  <header class="header-main">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo">
+        <div class="brand-logo-mark">ر</div>
+        <div class="brand-logo-text">
+          <span class="brand-name">ROOH</span>
+          <span class="brand-subtext">روح للمستحضرات التجميل</span>
+        </div>
+      </a>
+
+      <!-- Primary Navigation Links -->
+      <nav>
+        <ul class="nav-links">
+          <li class="nav-item active"><a href="#home">الرئيسية</a></li>
+          <li class="nav-item"><a href="#store">سوق روح (المتجر)</a></li>
+          <li class="nav-item"><a href="#customizer">اصنع منتجكِ بنفسكِ ✨</a></li>
+          <li class="nav-item"><a href="#about">قصة روح ومن نحن</a></li>
+          <li class="nav-item"><a href="#reviews">آراء العملاء</a></li>
+          <li class="nav-item"><a href="#support">الشكاوى والدعم</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="header-actions">
+        <!-- Customer Account Trigger -->
+        <button class="icon-btn" id="customerAccountBtn" title="حسابي / تسجيل الدخول" style="display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:20px; background:rgba(191,161,95,0.12); border:1px solid var(--rooh-gold); font-size:0.85rem; color:var(--rooh-dark); font-weight:700;">
+          <span>👤</span>
+          <span id="customerNavName">حسابي</span>
+        </button>
+
+        <!-- Language Switcher -->
+        <button class="icon-btn"
+          onclick="document.body.classList.toggle('ltr'); this.textContent = document.body.classList.contains('ltr') ? 'عربي' : 'EN';"
+          title="تغيير اللغة" style="font-weight:700; font-size:0.8rem;">
+          EN
+        </button>
+
+        <!-- Cart Trigger -->
+        <button class="icon-btn" id="cartOpenBtn" title="حقيبة التسوق">
+          <span>🛍️</span>
+          <span class="badge-counter cart-badge-count" style="display:none;">0</span>
+        </button>
+
+        <a href="#store" class="btn-rooh btn-rooh-primary btn-rooh-sm">
+          <span>تسوقي الآن</span>
+        </a>
+
+        <!-- Mobile Navigation Toggle (hamburger) -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle"
+          title="القائمة" aria-label="فتح القائمة" style="display:none;"
+          onclick="(function(){
+            var nav = document.querySelector('.nav-links');
+            nav.classList.toggle('mobile-open');
+            document.getElementById('mobileNavToggle').textContent = nav.classList.contains('mobile-open') ? '✕' : '☰';
+          })()">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Store Category Quick Subnav -->
+  <div class="store-subnav">
+    <div class="container">
+      <ul class="subnav-items" id="categorySubnav">
+        <!-- Loaded Dynamically via JS -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-text-col">
+        <div class="hero-tag">
+          <span>👑</span>
+          <span>عناية ملكية بمستخلصات طبيعية 100%</span>
+        </div>
+        <h1 class="hero-title" id="heroDynamicTitle">
+          فخامة الطبيعة.. <br>وإشراقة تدوم في <span class="accent">روحكِ</span>
+        </h1>
+        <p class="hero-desc" id="heroDynamicSubtitle">
+          نبتكر في <strong>روح (ROOH)</strong> مستحضرات تجميل راقية تجمع بين نقاء الزيوت الطبيعية المعصورة على البارد
+          وأحدث علوم التركيبات المعملية لتمنح بشرتكِ وشعركِ رونقاً ساحراً.
+        </p>
+        <div class="hero-cta">
+          <a href="#store" class="btn-rooh btn-rooh-primary btn-rooh-lg">
+            <span>تسوقي في سوق روح</span>
+            <span>🛍️</span>
+          </a>
+          <a href="#customizer" class="btn-rooh btn-rooh-outline btn-rooh-lg">
+            <span>ابتكري منتجكِ الخاص</span>
+            <span>🔬</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-badge-float top-badge">
+          <span style="font-size:1.4rem;">🌿</span>
+          <div>
+            <div style="font-weight:700; font-size:0.85rem; color:var(--rooh-dark);">نقاء عضوي معتمد</div>
+            <div style="font-size:0.75rem; color:var(--rooh-muted);">خالٍ تماماً من البارابين</div>
+          </div>
+        </div>
+
+        <div class="hero-card-display">
+          <div style="display:flex; justify-content:space-between; align-items:center;">
+            <span class="badge-tag tag-new">المجموعة الملكية</span>
+            <span style="font-size:0.85rem; color:var(--rooh-gold); font-weight:700;">ROOH ATELIER</span>
+          </div>
+
+          <div style="text-align:center; margin:auto 0;">
+            <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=500&q=80"
+              alt="سيروم روح الملكي"
+              style="width:230px; height:270px; object-fit:cover; border-radius:20px; margin:0 auto; box-shadow:0 15px 35px rgba(0,0,0,0.15);" />
+          </div>
+
+          <div
+            style="background:#FFF; padding:14px; border-radius:12px; border:1px solid var(--rooh-border); display:flex; justify-content:space-between; align-items:center;">
+            <div>
+              <div style="font-weight:700; font-size:0.95rem; color:var(--rooh-dark);">سيروم النضارة الملكي بالفيتامين C
+              </div>
+              <div style="font-size:0.78rem; color:var(--rooh-muted);">خلاصة الورد الجوري وحمض الهيالورونيك</div>
+            </div>
+            <strong style="font-size:1.15rem; color:var(--rooh-gold);">380 ج.م</strong>
+          </div>
+        </div>
+
+        <div class="hero-badge-float bottom-badge">
+          <span style="font-size:1.4rem;">🚀</span>
+          <div>
+            <div style="font-weight:700; font-size:0.85rem; color:var(--rooh-dark);">توصيل لكافة المحافظات</div>
+            <div style="font-size:0.75rem; color:var(--rooh-muted);">خلال 24 - 48 ساعة فقط</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Strip -->
+  <section class="trust-strip">
+    <div class="container trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon-box">🌿</div>
+        <div>
+          <div class="trust-title">مكونات طبيعية 100%</div>
+          <div class="trust-sub">مستخلصات نباتية نقية معتمدة معملياً</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon-box">🔬</div>
+        <div>
+          <div class="trust-title">صنع خصيصاً لكِ</div>
+          <div class="trust-sub">إمكانية تركيب مستحضركِ في مختبرنا</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon-box">🚚</div>
+        <div>
+          <div class="trust-title">شحن لجميع محافظات مصر</div>
+          <div class="trust-sub">شحن مجاني للطلبات فوق 750 ج.م</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon-box">💳</div>
+        <div>
+          <div class="trust-title">دفع آمن ومتعدد</div>
+          <div class="trust-sub">إنستاباي، فودافون كاش، ودفع عند الاستلام</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Souq ROOH Online Store -->
+  <section class="section-padding" id="store">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-subtitle">تشكيلة مستحضرات التجميل الراقية</span>
+        <h2 class="section-title">سوق روح – Souq ROOH</h2>
+        <p class="section-desc">اختاري من بين أرقى منتجات العناية بالبشرة، الشعر، الجسم، وعطور النيش الفاخرة المصنعة
+          بأعلى مواصفات الجودة المصرية والعالمية.</p>
+
+        <!-- Live Search Bar -->
+        <div style="max-width:500px; margin:24px auto 0; position:relative;">
+          <input type="text" id="storeSearchInput" class="ai-chat-input"
+            placeholder="ابحثي عن منتج، مكون، أو كود SKU..."
+            style="width:100%; padding:12px 24px; font-size:0.95rem; box-shadow:var(--rooh-shadow-sm);" />
+        </div>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Rendered Dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Create Your Own Product (مختبر ابتكار روح) -->
+  <section class="customizer-lab-section" id="customizer">
+    <div class="container">
+      <div class="section-head" style="color:#FFF;">
+        <span class="section-subtitle" style="color:var(--rooh-gold);">تجربة التجميل الحصرية</span>
+        <h2 class="section-title" style="color:#FFF;">مختبر ابتكار روح – اصنعي منتجكِ بنفسكِ</h2>
+        <p class="section-desc" style="color:#DDD4C5;">لأول مرة في مصر: صممي مستحضركِ التجميلي الخاص من الصفر، واختاري
+          القاعدة العضوية والمواد الفعالة والعطر الملكي واكتبي اسمكِ ليُطبع بماء الذهب على العبوة!</p>
+      </div>
+
+      <div id="customizerRoot">
+        <!-- Rendered via customizer.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us & Our Mission -->
+  <section class="section-padding" id="about"
+    style="background:var(--rooh-white); border-top:1px solid var(--rooh-border);">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-subtitle">من نحن ورؤيتنا</span>
+        <h2 class="section-title">قصة علامة "روح" التجميلية</h2>
+      </div>
+
+      <div class="about-two-col" style="display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:center;">
+        <div>
+          <h3
+            style="font-family:var(--rooh-font-serif); font-size:1.6rem; color:var(--rooh-gold-hover); margin-bottom:16px;">
+            جمال ينبع من الأعماق ليلامس الروح
+          </h3>
+          <p id="storyDynamicDesc"
+            style="color:var(--rooh-muted); font-size:1rem; line-height:1.8; margin-bottom:20px;">
+            انطلقت <strong>روح (ROOH)</strong> برؤية رائدة أسسها <strong>عبدالرحمن</strong> لإعادة تعريف مفهوم الجمال
+            الطبيعي الفاخر في مصر والشرق الأوسط. نحن ندمج بين أسرار الطبيعة العذراء وأحدث ما توصلت إليه علوم التركيبات
+            الجلدية لنقدم لكِ مستحضرات تجميل وعناية تمنح بشرتك نضارة استثنائية وثقة تليق بكِ.
+          </p>
+
+          <div
+            style="background:var(--rooh-sand-light); padding:20px; border-radius:12px; margin-bottom:16px; border-right:4px solid var(--rooh-gold);">
+            <strong style="color:var(--rooh-dark); font-size:1rem; display:block; margin-bottom:6px;">🎯 رسالتنا
+              (Mission):</strong>
+            <p id="storyDynamicMission" style="color:var(--rooh-muted); font-size:0.9rem; margin:0;">
+              تمكين كل امرأة ورجل من الحصول على عناية صحية نقية متطورة مصممة خصيصاً لاحتياجاتهم وبمعايير عالمية خالية
+              تماماً من الكيماويات الضارة.
+            </p>
+          </div>
+
+          <div
+            style="background:var(--rooh-sand-light); padding:20px; border-radius:12px; border-right:4px solid var(--rooh-gold);">
+            <strong style="color:var(--rooh-dark); font-size:1rem; display:block; margin-bottom:6px;">🌟 رؤيتنا
+              (Vision):</strong>
+            <p id="storyDynamicVision" style="color:var(--rooh-muted); font-size:0.9rem; margin:0;">
+              أن تكون "روح" المنظومة التجميلية الأولى في الشرق الأوسط التي تجمع بين التسوق الفاخر، التصنيع المخصص،
+              والشفافية التامة لتقديم حلول جمالية مستدامة.
+            </p>
+          </div>
+        </div>
+
+        <div style="position:relative;">
+          <img src="https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?auto=format&fit=crop&w=700&q=80"
+            alt="معمل روح"
+            style="width:100%; height:450px; object-fit:cover; border-radius:24px; box-shadow:var(--rooh-shadow-lg); border:1px solid var(--rooh-border);" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Wall -->
+  <section class="section-padding" id="reviews" style="background:var(--rooh-cream);">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-subtitle">تجارب حقيقية موثقة</span>
+        <h2 class="section-title">آراء عملاء روح المميزين</h2>
+        <p class="section-desc">نفخر بثقة آلاف العملاء في جميع محافظات مصر الذين اختاروا الجودة الملكية لمستحضراتنا.</p>
+        <button class="btn-rooh btn-rooh-primary btn-rooh-sm" style="margin-top:16px;"
+          onclick="document.getElementById('reviewModal').classList.add('open')">
+          <span>+ شاركينا تجربتكِ وتقييمكِ</span>
+        </button>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:24px;"
+        id="reviewsContainer">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Complaints, Support & Direct Contact -->
+  <section class="section-padding" id="support"
+    style="background:var(--rooh-white); border-top:1px solid var(--rooh-border);">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-subtitle">خدمة العملاء والشكاوى</span>
+        <h2 class="section-title">صوتكِ مسموع في روح</h2>
+        <p class="section-desc">رضاكم هو أولويتنا المطلقة. يمكنكِ تسجيل أي شكوى أو استفسار أو التحدث مع صاحب الشركة
+          الأستاذ عبدالرحمن مباشرة.</p>
+      </div>
+
+      <div class="support-two-col" style="display:grid; grid-template-columns:1.2fr 0.8fr; gap:40px; align-items:start;">
+        <!-- Complaints Form -->
+        <div
+          style="background:var(--rooh-ivory); padding:32px; border-radius:18px; border:1px solid var(--rooh-border);">
+          <h3 style="font-family:var(--rooh-font-serif); font-size:1.3rem; color:var(--rooh-dark); margin-bottom:16px;">
+            تسجيل شكوى أو طلب دعم فني
+          </h3>
+          <form id="complaintForm" style="display:flex; flex-direction:column; gap:14px;">
+            <div>
+              <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">الاسم الكريم
+                *</label>
+              <input type="text" id="cmpName" required class="ai-chat-input" style="width:100%; border-radius:8px;"
+                placeholder="اكتب اسمك بالكامل" />
+            </div>
+            <div class="complaint-two-col" style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
+              <div>
+                <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">رقم الهاتف
+                  *</label>
+                <input type="tel" id="cmpPhone" required class="ai-chat-input" style="width:100%; border-radius:8px;"
+                  placeholder="01xxxxxxxxx" />
+              </div>
+              <div>
+                <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">رقم الطلب (إن
+                  وجد)</label>
+                <input type="text" id="cmpOrderNum" class="ai-chat-input" style="width:100%; border-radius:8px;"
+                  placeholder="مثال: 1001" />
+              </div>
+            </div>
+            <div>
+              <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">نوع الاستفسار /
+                الشكوى</label>
+              <select id="cmpCategory" class="select-filter" style="width:100%; border-radius:8px; padding:10px;">
+                <option value="استفسار عن المنتجات">استفسار عن المنتجات وطريقة الاستخدام</option>
+                <option value="تأخر في الشحن">استفسار أو متابعة موعد الشحن والتوصيل</option>
+                <option value="تلف في الشحنة">تلف في الشحنة أو كسر أثناء التوصيل</option>
+                <option value="استبدال أو استرجاع">طلب استبدال أو استرجاع</option>
+                <option value="شكوى مباشرة للمالك">شكوى مباشرة لإدارة الشركة</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">تفاصيل الشكوى أو
+                الملاحظة *</label>
+              <textarea id="cmpDetails" required class="ai-chat-input"
+                style="width:100%; height:90px; border-radius:8px;"
+                placeholder="اكتبي تفاصيل المشكلة بدقة لنتمكن من حلها فوراً..."></textarea>
+            </div>
+            <button type="submit" class="btn-rooh btn-rooh-primary"
+              style="padding:14px; font-size:1rem; margin-top:6px;">
+              <span>إرسال الشكوى لفريق المتابعة</span>
+              <span>📨</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Owner Direct Contact Card -->
+        <div
+          style="background:linear-gradient(135deg, var(--rooh-dark) 0%, #362F27 100%); color:#FFF; padding:32px; border-radius:18px; border:1px solid var(--rooh-gold); box-shadow:var(--rooh-shadow-lg);">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px;">
+            <div
+              style="width:50px; height:50px; border-radius:50%; background:var(--rooh-gold); display:flex; align-items:center; justify-content:center; font-size:1.5rem; color:#FFF;">
+              👑
+            </div>
+            <div>
+              <span
+                style="font-size:0.75rem; color:var(--rooh-gold); text-transform:uppercase; letter-spacing:1px; font-weight:700;">مباشرة
+                مع المالك</span>
+              <h3 style="font-family:var(--rooh-font-serif); font-size:1.3rem; margin:0;">الأستاذ / عبدالرحمن</h3>
+              <div style="font-size:0.8rem; color:#DDD4C5;">صاحب ومؤسس شركة روح لمستحضرات التجميل</div>
+            </div>
+          </div>
+
+          <p style="font-size:0.9rem; color:#DDD4C5; line-height:1.7; margin-bottom:24px;">
+            "أبوابنا مفتوحة لخدمتكم دائماً. في حال واجهتكم أي مشكلة أو رغبتم في تقديم اقتراحات خاصة أو استشارات تجميلية،
+            يسعدني التواصل معكم هاتفياً أو عبر تطبيق واتساب بشكل مباشر."
+          </p>
+
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <a href="https://wa.me/201227208589" target="_blank" class="btn-rooh"
+              style="background:#25D366; color:#FFF; width:100%; font-size:0.95rem; justify-content:center;">
+              <span>محادثة واتساب مباشرة: 01227208589</span>
+              <span>💬</span>
+            </a>
+            <a href="tel:01227208589" class="btn-rooh btn-rooh-gold-outline"
+              style="width:100%; justify-content:center; font-size:0.95rem;">
+              <span>اتصال هاتفي: 01227208589</span>
+              <span>📞</span>
+            </a>
+          </div>
+
+          <div
+            style="margin-top:24px; pt-3; border-top:1px solid rgba(255,255,255,0.1); font-size:0.8rem; color:#A89F91; line-height:1.6;">
+            <div>📍 <strong>المقر الرئيسي:</strong>الاسكندرية، العوايد عزبة محسن </div>
+            <div>🕒 <strong>ساعات العمل:</strong> يومياً من 10 صباحاً حتى 10 مساءً</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Luxury Footer -->
+  <footer class="footer-main">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4 style="font-size:1.5rem;">ROOH – روح</h4>
+        <p style="font-size:0.88rem; color:var(--rooh-sand); line-height:1.8; margin-bottom:20px;">
+          المنظومة التجميلية المتكاملة الرائدة في مصر. فخامة المكونات الطبيعية، التصنيع المخصص، وأعلى معايير الرعاية
+          والشفافية.
+        </p>
+        <div style="font-size:0.85rem; color:#C5A880;">
+          📞 هاتف الإدارة: 01227208589<br>
+          📍 التجمع الخامس، القاهرة الجديدة
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="#home">الرئيسية</a></li>
+          <li><a href="#store">سوق روح (المتجر)</a></li>
+          <li><a href="#customizer">اصنع منتجكِ بنفسكِ</a></li>
+          <li><a href="#about">قصة روح ومن نحن</a></li>
+          <li><a href="#reviews">آراء العملاء والتقييمات</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>الأقسام التجميلية</h4>
+        <ul class="footer-links">
+          <li><a href="#store" onclick="window.roohApp.filterCategory('skincare')">العناية بالبشرة</a></li>
+          <li><a href="#store" onclick="window.roohApp.filterCategory('haircare')">العناية بالشعر</a></li>
+          <li><a href="#store" onclick="window.roohApp.filterCategory('bodycare')">العناية بالجسم</a></li>
+          <li><a href="#store" onclick="window.roohApp.filterCategory('perfumes')">عطور النيش الملكية</a></li>
+          <li><a href="#store" onclick="window.roohApp.filterCategory('special_offers')">العروض والتخفيضات</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>خدمة العملاء والدعم</h4>
+        <ul class="footer-links">
+          <li><a href="#support">الشكاوى وخدمة العملاء</a></li>
+          <li><a href="javascript:void(0)" onclick="window.roohChatbot.toggleWindow(true)">المساعد الذكي (روح AI)</a>
+          </li>
+          <li><a href="tel:01227208589">الاتصال بالمالك: عبدالرحمن</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <div>جميع الحقوق محفوظة © 2026 شركة روح للمستحضرات التجميل (ROOH) | إشراف: عبدالرحمن</div>
+      <div style="display:flex; align-items:center; gap:20px;">
+        <span>سجل تجاري: CR-74892-CAIRO | بطاقة ضريبية: EG-893-482-109</span>
+        <!-- Hidden Owner Link (تحت خالص ع الشمال) -->
+        <a href="login.html" id="footerAboudiLink"
+          style="font-size: 0.85rem; color: rgba(239, 233, 223, 0.45); text-decoration: none; font-weight: 700; transition: all 0.3s ease; padding: 4px 8px; border-radius: 4px;"
+          onmouseover="this.style.color='var(--rooh-gold)'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.color='rgba(239, 233, 223, 0.45)'; this.style.background='transparent'">
+          عبودي
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fixed Stealth Link at Absolute Bottom-Left (تحت خالص ع الشمال - سهل اللمس والفتح من الموبايل والكمبيوتر) -->
+  <div style="position: fixed; bottom: 8px; left: 10px; z-index: 999999;">
+    <a href="login.html" id="stealthAboudiBtn" title="بوابة الإدارة الخاصة (عبودي)"
+      style="display: inline-flex; align-items: center; justify-content: center; min-height: 36px; min-width: 46px; font-size: 0.82rem; color: rgba(110, 104, 95, 0.55); text-decoration: none; font-weight: 800; padding: 5px 12px; border-radius: 8px; background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(4px); box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; user-select: none;"
+      onmouseover="this.style.color='#FFF'; this.style.background='rgba(36,33,30,0.95)';"
+      onmouseout="this.style.color='rgba(110, 104, 95, 0.55)'; this.style.background='rgba(255, 255, 255, 0.75)';">
+      عبودي
+    </a>
+  </div>
+
+  <!-- Sliding Cart Drawer -->
+  <div class="cart-drawer-overlay" id="cartOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>حقيبة التسوق (سوق روح)</h3>
+      <button id="cartCloseBtn" style="font-size:1.5rem; color:var(--rooh-muted);">&times;</button>
+    </div>
+    <div class="cart-body" id="cartDrawerBody">
+      <!-- Dynamic Items -->
+    </div>
+    <div class="cart-footer" id="cartDrawerFooter">
+      <!-- Dynamic Totals & Checkout -->
+    </div>
+  </div>
+
+  <!-- Checkout Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-content" style="max-width:850px;">
+      <!-- Loaded dynamically via js/app.js -->
+    </div>
+  </div>
+
+  <!-- Product Details Modal -->
+  <div class="modal-overlay" id="productDetailModal">
+    <div class="modal-content" style="max-width:820px;">
+      <button class="modal-close-btn"
+        onclick="document.getElementById('productDetailModal').classList.remove('open')">&times;</button>
+      <div id="productModalContent">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Review Modal -->
+  <div class="modal-overlay" id="reviewModal">
+    <div class="modal-content" style="max-width:550px;">
+      <button class="modal-close-btn"
+        onclick="document.getElementById('reviewModal').classList.remove('open')">&times;</button>
+      <h3 style="font-family:var(--rooh-font-serif); font-size:1.4rem; color:var(--rooh-dark); margin-bottom:16px;">
+        تقييم تجربة منتجات روح
+      </h3>
+      <form id="submitReviewForm" style="display:flex; flex-direction:column; gap:14px;">
+        <div>
+          <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">اسمكِ الكريم *</label>
+          <input type="text" id="revCustomerName" required class="ai-chat-input" style="width:100%; border-radius:8px;"
+            placeholder="اكتبي اسمكِ" />
+        </div>
+        <div>
+          <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">التقييم بالنجوم *</label>
+          <select id="revRatingSelect" class="select-filter" style="width:100%; border-radius:8px; padding:10px;">
+            <option value="5">★★★★★ 5 نجوم (ممتاز جداً)</option>
+            <option value="4">★★★★☆ 4 نجوم (جيد جداً)</option>
+            <option value="3">★★★☆☆ 3 نجوم (جيد)</option>
+          </select>
+        </div>
+        <div>
+          <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">عنوان الرأي أو التجربة
+            *</label>
+          <input type="text" id="revTitle" required class="ai-chat-input" style="width:100%; border-radius:8px;"
+            placeholder="مثال: بشرتي أصبحت نضرة كالحرير!" />
+        </div>
+        <div>
+          <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">تفاصيل تجربتكِ مع المنتج
+            *</label>
+          <textarea id="revComment" required class="ai-chat-input" style="width:100%; height:90px; border-radius:8px;"
+            placeholder="اكتبي رأيكِ بمصداقية..."></textarea>
+        </div>
+        <button type="submit" class="btn-rooh btn-rooh-primary" style="padding:12px; font-size:1rem;">
+          <span>نشر التقييم في المجتمع</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Customer Portal Modal (Login / Register / Profile & Orders) -->
+  <div class="modal-overlay" id="customerModal">
+    <div class="modal-content" style="max-width:620px;">
+      <button class="modal-close-btn" onclick="document.getElementById('customerModal').classList.remove('open')">&times;</button>
+      <div id="customerModalBody">
+        <!-- Rendered dynamically via js/app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data/seed.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/invoice.js"></script>
+  <script src="js/customizer.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

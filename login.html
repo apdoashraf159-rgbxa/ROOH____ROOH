@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>بوابة تسجيل الدخول الإدارية | ROOH Enterprise</title>
+  <!-- Luxury Styles -->
+  <link rel="stylesheet" href="css/rooh-luxury.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 10% 20%, #FAF6EE 0%, #F5EFE6 50%, #EBE2D3 100%);
+      padding: 20px;
+    }
+    .login-card {
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(191, 161, 95, 0.4);
+      border-radius: var(--rooh-radius-lg);
+      box-shadow: 0 20px 50px rgba(36, 33, 30, 0.12);
+      max-width: 440px;
+      width: 100%;
+      padding: 38px 30px;
+      text-align: center;
+      position: relative;
+    }
+    .login-brand-logo {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 16px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--rooh-gold) 0%, #D4BA7D 50%, var(--rooh-gold-hover) 100%);
+      color: #FFF;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      box-shadow: var(--rooh-shadow-gold);
+    }
+    .form-group {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+    .form-label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--rooh-dark);
+      display: block;
+      margin-bottom: 6px;
+    }
+    .form-input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1.5px solid var(--rooh-border);
+      border-radius: var(--rooh-radius-md);
+      font-family: inherit;
+      font-size: 16px !important;
+      outline: none;
+      transition: var(--rooh-transition);
+      background: #FBF9F5;
+      -webkit-text-size-adjust: 100%;
+    }
+    .form-input:focus {
+      border-color: var(--rooh-gold);
+      background: #FFF;
+      box-shadow: 0 0 0 3px rgba(191, 161, 95, 0.2);
+    }
+    .error-banner {
+      background: #FFEBEE;
+      color: #C62828;
+      border: 1px solid #FFCDD2;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 0.88rem;
+      margin-bottom: 18px;
+      display: none;
+      text-align: right;
+    }
+    .credential-hint-box {
+      margin-top: 20px;
+      padding: 14px;
+      background: #FAF8F5;
+      border: 1px dashed rgba(191,161,95,0.4);
+      border-radius: 10px;
+      text-align: right;
+      font-size: 0.8rem;
+      color: var(--rooh-muted);
+      line-height: 1.6;
+    }
+    @media (max-width: 480px) {
+      body { padding: 12px; }
+      .login-card { padding: 26px 18px; border-radius: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <div class="login-brand-logo">ر</div>
+    <h2 style="font-family:var(--rooh-font-serif); font-size:1.8rem; color:var(--rooh-dark); margin-bottom:4px;">
+      ROOH – روح
+    </h2>
+    <p style="font-size:0.85rem; color:var(--rooh-muted); margin-bottom:24px;">
+      بوابة الدخول الآمنة للوحة التحكم المركزية
+    </p>
+
+    <div class="error-banner" id="errorBanner"></div>
+
+    <form id="loginForm" onsubmit="handleLoginSubmit(event)">
+      <div class="form-group">
+        <label class="form-label" for="loginUsername">اسم المستخدم أو رقم الهاتف:</label>
+        <input type="text" id="loginUsername" class="form-input" placeholder="aboudi أو عبودي أو رقم هاتفك (01227208589)" required autocomplete="username" autofocus />
+      </div>
+
+      <div class="form-group">
+        <label class="form-label" for="loginPassword">كلمة المرور (Password):</label>
+        <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required autocomplete="current-password" />
+      </div>
+
+      <button type="submit" class="btn-rooh btn-rooh-primary" id="loginBtn" style="width:100%; padding:15px; font-size:1.05rem; margin-top:8px; border-radius:50px;">
+        <span>تسجيل الدخول للوحة التحكم</span>
+        <span>🔐</span>
+      </button>
+    </form>
+
+    <div class="credential-hint-box">
+      <div style="font-weight:700; color:var(--rooh-dark); margin-bottom:4px;">🔑 بيانات الدخول:</div>
+      <div>• <strong>المدير العام والمالك (عبدالرحمن):</strong> اسم المستخدم <code>aboudi</code> أو <code>عبودي</code> أو <code>01227208589</code></div>
+      <div>• <strong>كلمة المرور:</strong> <code>Aboudi@2026</code> أو <code>admin</code> أو <code>123456</code> أو <code>aboudi</code></div>
+    </div>
+
+    <div style="margin-top:24px; padding-top:16px; border-top:1px solid var(--rooh-sand); font-size:0.85rem;">
+      <a id="backToStoreLink" href="index.html" style="color:var(--rooh-gold); font-weight:700;">← العودة للمتجر الرئيسي (Souq ROOH)</a>
+    </div>
+  </div>
+
+  <script src="data/seed.js"></script>
+  <script src="js/db.js"></script>
+  <script>
+    // Clean URLs link adjustment
+    if (window.location.protocol.startsWith('http')) {
+      document.getElementById('backToStoreLink').setAttribute('href', '/');
+    }
+
+    async function handleLoginSubmit(e) {
+      e.preventDefault();
+      const userEl = document.getElementById('loginUsername');
+      const passEl = document.getElementById('loginPassword');
+      const errBox = document.getElementById('errorBanner');
+      const btn = document.getElementById('loginBtn');
+
+      errBox.style.display = 'none';
+      btn.disabled = true;
+      btn.innerHTML = '<span>جاري التحقق من الصلاحيات...</span>';
+
+      try {
+        const result = await window.roohDB.login(userEl.value, passEl.value);
+        btn.innerHTML = '<span>تم التحقق بنجاح ✓ جاري فتح لوحة التحكم...</span>';
+        btn.style.background = '#2E7D32';
+
+        setTimeout(() => {
+          const target = window.location.protocol.startsWith('http') ? '/admin' : 'admin.html';
+          window.location.href = target;
+        }, 150);
+      } catch (err) {
+        let msg = err && err.message ? err.message : 'اسم المستخدم أو كلمة المرور غير صحيحة! يرجى مراجعة البيانات.';
+        if (msg.includes('Unexpected') || msg.includes('JSON') || msg.includes('token') || msg.includes('<') || msg.includes('fetch')) {
+          msg = 'اسم المستخدم أو كلمة المرور غير صحيحة! يرجى مراجعة البيانات.';
+        }
+        errBox.textContent = msg;
+        errBox.style.display = 'block';
+        btn.disabled = false;
+        btn.style.background = '';
+        btn.innerHTML = '<span>تسجيل الدخول للوحة التحكم</span> <span>🔐</span>';
+      }
+    }
+  </script>
+</body>
+</html>

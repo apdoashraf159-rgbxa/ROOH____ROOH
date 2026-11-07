@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم المركزية الشاملة | ROOH Enterprise - عبدالرحمن</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/rooh-luxury.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👑</text></svg>">
+</head>
+<body class="admin-body">
+
+  <!-- Mobile Sidebar Overlay -->
+  <div class="sidebar-mobile-overlay" id="sidebarMobileOverlay" onclick="toggleMobileSidebar(false)"></div>
+
+  <!-- Admin Sidebar (25 Core Modules in Collapsible Groups) -->
+  <aside class="admin-sidebar" id="adminSidebar">
+    <div class="admin-sidebar-brand">
+      <div class="brand-logo-mark" style="width:40px; height:40px; font-size:1.2rem; background:linear-gradient(135deg, var(--rooh-gold), #D4BA7D);">ر</div>
+      <div style="flex:1;">
+        <h2 style="font-size:1.15rem; margin:0; font-family:var(--rooh-font-serif); color:#FFF;">ROOH ERP</h2>
+        <span style="font-size:0.75rem; color:var(--rooh-sand);">إشراف المالك: عبدالرحمن</span>
+      </div>
+      <button class="mobile-close-sidebar-btn" onclick="toggleMobileSidebar(false)">&times;</button>
+    </div>
+
+    <div class="admin-nav-scroll" id="adminNavScroll">
+      <!-- Group 1: Overview & Orders & Reports -->
+      <div class="nav-collapsible-group active" data-group="overview">
+        <div class="nav-group-header" onclick="toggleNavGroup(this)">
+          <span>📊 العمليات والطلبات</span>
+          <span class="group-arrow">▾</span>
+        </div>
+        <ul class="admin-nav-list">
+          <li class="admin-nav-item active" data-section="overview"><a href="#overview"><span class="nav-icon">📊</span> 1. الرئيسية</a></li>
+          <li class="admin-nav-item" data-section="orders"><a href="#orders"><span class="nav-icon">📦</span> 2. الطلبات <span class="nav-badge" id="ordersNavBadge">0</span></a></li>
+          <li class="admin-nav-item" data-section="customers"><a href="#customers"><span class="nav-icon">👥</span> 5. العملاء</a></li>
+          <li class="admin-nav-item" data-section="reports"><a href="#reports"><span class="nav-icon">📈</span> 25. التقارير والإحصائيات</a></li>
+        </ul>
+      </div>
+
+      <!-- Group 2: Products & Categories & Discounts -->
+      <div class="nav-collapsible-group active" data-group="store">
+        <div class="nav-group-header" onclick="toggleNavGroup(this)">
+          <span>💄 المنتجات والأقسام والخصومات</span>
+          <span class="group-arrow">▾</span>
+        </div>
+        <ul class="admin-nav-list">
+          <li class="admin-nav-item" data-section="products"><a href="#products"><span class="nav-icon">💄</span> 3. المنتجات</a></li>
+          <li class="admin-nav-item" data-section="categories"><a href="#categories"><span class="nav-icon">📑</span> 4. الأقسام</a></li>
+          <li class="admin-nav-item" data-section="product_discounts"><a href="#product_discounts"><span class="nav-icon">🏷️</span> 11. خصم على المنتج</a></li>
+          <li class="admin-nav-item" data-section="coupons"><a href="#coupons"><span class="nav-icon">🎟️</span> 10. أكواد الخصم</a></li>
+        </ul>
+      </div>
+
+      <!-- Group 3: Store & Website Design, Colors & Media -->
+      <div class="nav-collapsible-group active" data-group="design">
+        <div class="nav-group-header" onclick="toggleNavGroup(this)">
+          <span>🎨 تصميم المتجر وتصميم الموقع والهوية</span>
+          <span class="group-arrow">▾</span>
+        </div>
+        <ul class="admin-nav-list">
+          <li class="admin-nav-item" data-section="store_builder"><a href="#store_builder"><span class="nav-icon">🏬</span> 18. تصميم المتجر</a></li>
+          <li class="admin-nav-item" data-section="website_builder"><a href="#website_builder"><span class="nav-icon">🎨</span> 17. تصميم الموقع</a></li>
+          <li class="admin-nav-item" data-section="site_colors"><a href="#site_colors"><span class="nav-icon">🖌️</span> 15. لوحة الألوان وخلفيات الطبيعة</a></li>
+          <li class="admin-nav-item" data-section="media_library"><a href="#media_library"><span class="nav-icon">🖼️</span> 14. مكتبة الصور وتعديل الصور</a></li>
+        </ul>
+      </div>
+
+      <!-- Group 4: Custom Lab (اعمل منتجك بنفسك) -->
+      <div class="nav-collapsible-group active" data-group="lab">
+        <div class="nav-group-header" onclick="toggleNavGroup(this)">
+          <span>🔬 معمل ابتكار المستحضرات</span>
+          <span class="group-arrow">▾</span>
+        </div>
+        <ul class="admin-nav-list">
+          <li class="admin-nav-item" data-section="lab_editor"><a href="#lab_editor"><span class="nav-icon">🧪</span> 19. تعديل المعمل الخاص</a></li>
+        </ul>
+      </div>
+
+      <!-- Group 5: The Vault & Finances & Shipping -->
+      <div class="nav-collapsible-group active" data-group="finance">
+        <div class="nav-group-header" onclick="toggleNavGroup(this)">
+          <span>💰 الخزنة والمالية والشحن</span>
+          <span class="group-arrow">▾</span>
+        </div>
+        <ul class="admin-nav-list">
+          <li class="admin-nav-item master-only-nav" data-section="vault"><a href="#vault" style="color:#FFD700; font-weight:700;"><span class="nav-icon">🔐</span> 6. الخزنة (سري للمدير)</a></li>
+          <li class="admin-nav-item" data-section="payment_methods"><a href="#payment_methods"><span class="nav-icon">💳</span> 7. طرق الدفع</a></li>
+          <li class="admin-nav-item master-only-nav" data-section="payment_integrations"><a href="#payment_integrations"><span class="nav-icon">🔌</span> 8. إعدادات الربط المالي</a></li>
+          <li class="admin-nav-item" data-section="governorates"><a href="#governorates"><span class="nav-icon">🚚</span> 9. أسعار التوصيل والمحافظات</a></li>
+        </ul>
+      </div>
+
+      <!-- Group 6: Team & Meetings & Feedback -->
+      <div class="nav-collapsible-group active" data-group="team">
+        <div class="nav-group-header" onclick="toggleNavGroup(this)">
+          <span>👥 الفريق والاجتماعات والآراء</span>
+          <span class="group-arrow">▾</span>
+        </div>
+        <ul class="admin-nav-list">
+          <li class="admin-nav-item" data-section="meetings"><a href="#meetings"><span class="nav-icon">💬</span> 20. اجتماعات المدير <span class="nav-badge" id="meetingsBadge" style="display:none;">0</span></a></li>
+          <li class="admin-nav-item master-only-nav" data-section="managers_assistants"><a href="#managers_assistants"><span class="nav-icon">🛡️</span> 21. المديرون والمساعدون</a></li>
+          <li class="admin-nav-item" data-section="reviews"><a href="#reviews"><span class="nav-icon">⭐</span> 12. التقييمات</a></li>
+          <li class="admin-nav-item" data-section="notifications"><a href="#notifications"><span class="nav-icon">🔔</span> 13. الإشعارات <span class="nav-badge" id="notifBadge">0</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Group 7: AI & Security & Global Settings -->
+      <div class="nav-collapsible-group active" data-group="security">
+        <div class="nav-group-header" onclick="toggleNavGroup(this)">
+          <span>🤖 الذكاء الاصطناعي والحماية</span>
+          <span class="group-arrow">▾</span>
+        </div>
+        <ul class="admin-nav-list">
+          <li class="admin-nav-item master-only-nav" data-section="admin_ai"><a href="#admin_ai" style="color:var(--rooh-gold);"><span class="nav-icon">🧠</span> 23. مساعد المدير الذكي</a></li>
+          <li class="admin-nav-item master-only-nav" data-section="security_system"><a href="#security_system"><span class="nav-icon">🔒</span> 22. سيستم الحماية</a></li>
+          <li class="admin-nav-item" data-section="settings"><a href="#settings"><span class="nav-icon">⚙️</span> 24. إعدادات الموقع</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Logged In User Strip (Abdelrahman) -->
+    <div class="admin-user-footer" onclick="openProfileModal()" title="انقر لتعديل بياناتك وكلمة المرور">
+      <div class="admin-user-avatar" id="adminUserAvatar">👑</div>
+      <div class="admin-user-info">
+        <span class="admin-user-name" id="adminUserName">عبدالرحمن</span>
+        <span class="admin-user-role" id="adminUserRole">المدير الأساسي والمالك</span>
+      </div>
+      <span style="font-size:0.8rem; color:var(--rooh-gold);">✏️</span>
+    </div>
+  </aside>
+
+  <!-- Main View Area -->
+  <main class="admin-main">
+    <!-- Topbar -->
+    <header class="admin-topbar">
+      <div class="topbar-left-cluster">
+        <!-- Mobile Hamburger Toggle -->
+        <button class="mobile-sidebar-toggle" onclick="toggleMobileSidebar(true)" title="فتح القائمة">
+          ☰
+        </button>
+        <div class="topbar-title">
+          <h1 id="adminViewTitle">الرئيسية (Dashboard Overview)</h1>
+        </div>
+      </div>
+
+      <div class="topbar-actions">
+        <!-- Prominent Global SAVE Button -->
+        <button id="globalSaveBtn" onclick="window.roohAdmin?.triggerGlobalSave()" class="btn-rooh-save-all" title="حفظ جميع التعديلات ونشرها فوراً على الموقع والمتجر والموبايل" style="
+          background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+          color: #FFF;
+          font-weight: 800;
+          font-size: 0.95rem;
+          padding: 8px 18px;
+          border-radius: 30px;
+          border: 1px solid #4CAF50;
+          box-shadow: 0 4px 14px rgba(46, 125, 50, 0.4);
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          cursor: pointer;
+          transition: all 0.25s ease;
+        ">
+          <span style="font-size:1.15rem;">💾</span>
+          <span>حفظ وتطبيق (SAVE)</span>
+        </button>
+
+        <!-- Notifications Bell -->
+        <a href="#notifications" class="icon-btn-admin" title="مركز الإشعارات" style="position:relative;">
+          <span>🔔</span>
+          <span class="topbar-notif-pill" id="topbarNotifCount" style="display:none;">0</span>
+        </a>
+
+        <!-- Meetings Shortcut -->
+        <a href="#meetings" class="icon-btn-admin" title="غرفة اجتماعات المدير">
+          <span>💬</span>
+        </a>
+
+        <!-- Live Store Link -->
+        <a href="/" target="_blank" class="btn-rooh btn-rooh-outline btn-rooh-sm">
+          <span>الموقع والمتجر</span>
+          <span>↗️</span>
+        </a>
+
+        <!-- Direct Call Owner Badge -->
+        <div class="owner-badge-pill">
+          📞 <strong>01227208589</strong>
+        </div>
+
+        <!-- Logout Button -->
+        <button class="btn-rooh btn-rooh-outline btn-rooh-sm" style="color:var(--rooh-danger); border-color:var(--rooh-danger);" onclick="window.roohDB.logout()" title="تسجيل الخروج">
+          <span>خروج</span>
+          <span>🚪</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Content Workspace -->
+    <section class="admin-content-view" id="adminViewRoot">
+      <!-- Injected Dynamically by js/admin.js -->
+    </section>
+  </main>
+
+  <!-- Profile Edit Modal -->
+  <div class="modal-overlay" id="profileEditModal">
+    <div class="modal-content" style="max-width:520px;">
+      <button class="modal-close-btn" onclick="document.getElementById('profileEditModal').classList.remove('open')">&times;</button>
+      <h3 style="font-family:var(--rooh-font-serif); font-size:1.35rem; color:var(--rooh-dark); margin-bottom:18px;">
+        تعديل بيانات حساب المدير الأساسي عبدالرحمن
+      </h3>
+      <form id="profileEditForm" onsubmit="handleProfileUpdateSubmit(event)" style="display:flex; flex-direction:column; gap:14px;">
+        <div>
+          <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">الاسم الظاهر:</label>
+          <input type="text" id="profNameInput" class="form-input" required />
+        </div>
+        <div>
+          <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">رقم الهاتف / واتساب:</label>
+          <input type="text" id="profPhoneInput" class="form-input" required />
+        </div>
+        <div>
+          <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">صورة البروفايل أو الشعار (رفع ملف من الكمبيوتر أو Emoji):</label>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <label for="profAvatarFileInput" style="
+              display:inline-flex; align-items:center; gap:8px; cursor:pointer;
+              background:var(--rooh-gold); color:#FFF; padding:8px 16px;
+              border-radius:8px; font-size:0.88rem; font-weight:600;
+            ">
+              📁 اختر صورة من جهازك
+            </label>
+            <input type="file" id="profAvatarFileInput" accept="image/*" style="display:none;" onchange="handleProfileAvatarFile(this)" />
+            <div id="profAvatarPreviewWrap" style="width:44px; height:44px; border-radius:50%; background:#FAF6EE; border:1px solid var(--rooh-gold); display:flex; align-items:center; justify-content:center; overflow:hidden; font-size:1.4rem;">
+              <span id="profAvatarEmoji">👑</span>
+              <img id="profAvatarImg" src="" style="display:none; width:100%; height:100%; object-fit:cover;" />
+            </div>
+          </div>
+          <input type="text" id="profAvatarInput" class="form-input" placeholder="👑 أو سيتم وضع الصورة المرفوعة تلقائياً" />
+        </div>
+        <div>
+          <label style="font-size:0.85rem; font-weight:600; display:block; margin-bottom:4px;">تغيير كلمة المرور (اتركه فارغاً للإبقاء على الحالية):</label>
+          <input type="password" id="profNewPassInput" class="form-input" placeholder="كلمة مرور جديدة (6 خانات على الأقل)" autocomplete="new-password" />
+        </div>
+        <button type="submit" class="btn-rooh btn-rooh-primary" style="margin-top:8px; padding:12px;">
+          <span>حفظ التعديلات في الحساب</span>
+          <span>💾</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data/seed.js"></script>
+  <script src="js/db.js"></script>
+  <script src="js/invoice.js"></script>
+  <script src="js/accounting.js"></script>
+  <script src="js/builder.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    // ============================================================
+    // Session Authentication Guard & UI Hydration
+    // FIX: Moved to DOMContentLoaded so db.js is fully parsed
+    // before the check runs — fixes mobile browsers that execute
+    // inline scripts before deferred/async scripts finish parsing.
+    // ============================================================
+    function _roohInitAdminGuard() {
+      let user = window.roohDB?.getCurrentUser();
+      if (!user) {
+        try {
+          const raw = localStorage.getItem('rooh_auth_user');
+          if (raw) user = JSON.parse(raw);
+        } catch (e) {}
+      }
+      if (!user) {
+        window.location.href = window.location.protocol.startsWith('http') ? '/login' : 'login.html';
+        return;
+      }
+      const nameEl = document.getElementById('adminUserName');
+      const roleEl = document.getElementById('adminUserRole');
+      const avatarEl = document.getElementById('adminUserAvatar');
+      if (nameEl) nameEl.textContent = user.name || 'عبدالرحمن';
+      if (roleEl) roleEl.textContent = user.role_ar || (user.is_master ? 'المدير الأساسي والمالك' : 'مساعد');
+      if (avatarEl) {
+        if (user.avatar && (user.avatar.startsWith('data:image') || user.avatar.startsWith('http'))) {
+          avatarEl.innerHTML = `<img src="${user.avatar}" alt="${user.name}" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />`;
+        } else {
+          avatarEl.textContent = user.avatar || (user.is_master ? '👑' : '👤');
+        }
+      }
+
+      // Hide restricted items if not master
+      if (!user.is_master) {
+        document.querySelectorAll('.master-only-nav').forEach(el => el.style.display = 'none');
+      }
+    }
+
+    // Try immediately (desktop/fast browsers), then also on DOMContentLoaded
+    // as a safety net for mobile browsers that may not have parsed db.js yet
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', _roohInitAdminGuard);
+    } else {
+      _roohInitAdminGuard();
+    }
+
+    function toggleMobileSidebar(open) {
+      const sb = document.getElementById('adminSidebar');
+      const ov = document.getElementById('sidebarMobileOverlay');
+      if (open) {
+        sb.classList.add('mobile-open');
+        ov.classList.add('mobile-open');
+      } else {
+        sb.classList.remove('mobile-open');
+        ov.classList.remove('mobile-open');
+      }
+    }
+
+    function toggleNavGroup(headerEl) {
+      const group = headerEl.parentElement;
+      group.classList.toggle('active');
+    }
+
+    function openProfileModal() {
+      const user = window.roohDB?.getCurrentUser() || {};
+      document.getElementById('profNameInput').value = user.name || 'عبدالرحمن';
+      document.getElementById('profPhoneInput').value = user.phone || '01227208589';
+      document.getElementById('profAvatarInput').value = user.avatar || '👑';
+      document.getElementById('profNewPassInput').value = '';
+
+      const imgEl = document.getElementById('profAvatarImg');
+      const emojiEl = document.getElementById('profAvatarEmoji');
+      if (user.avatar && (user.avatar.startsWith('data:image') || user.avatar.startsWith('http'))) {
+        imgEl.src = user.avatar;
+        imgEl.style.display = 'block';
+        emojiEl.style.display = 'none';
+      } else {
+        imgEl.style.display = 'none';
+        emojiEl.style.display = 'inline';
+        emojiEl.textContent = user.avatar || '👑';
+      }
+
+      document.getElementById('profileEditModal').classList.add('open');
+    }
+
+    function handleProfileAvatarFile(input) {
+      if (input.files && input.files[0]) {
+        const file = input.files[0];
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const dataUrl = e.target.result;
+          document.getElementById('profAvatarInput').value = dataUrl;
+          const imgEl = document.getElementById('profAvatarImg');
+          const emojiEl = document.getElementById('profAvatarEmoji');
+          imgEl.src = dataUrl;
+          imgEl.style.display = 'block';
+          emojiEl.style.display = 'none';
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    async function handleProfileUpdateSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('profNameInput').value.trim();
+      const phone = document.getElementById('profPhoneInput').value.trim();
+      const avatar = document.getElementById('profAvatarInput').value.trim();
+      const pass = document.getElementById('profNewPassInput').value.trim();
+
+      const payload = { name, phone, avatar };
+      if (pass) payload.password = pass;
+
+      try {
+        await window.roohDB.updateAdminProfile(payload);
+        document.getElementById('profileEditModal').classList.remove('open');
+        window.RoohUtil.showToast('تم تحديث بيانات حسابك بنجاح ✓', 'success');
+        document.getElementById('adminUserName').textContent = name;
+        const avatarEl = document.getElementById('adminUserAvatar');
+        if (avatarEl) {
+          if (avatar && (avatar.startsWith('data:image') || avatar.startsWith('http'))) {
+            avatarEl.innerHTML = `<img src="${avatar}" alt="${name}" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />`;
+          } else {
+            avatarEl.textContent = avatar || '👑';
+          }
+        }
+      } catch (err) {
+        alert(err.message || 'فشل تحديث البيانات');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "rooh-cosmetics-ecosystem",
+  "version": "2.0.0",
+  "description": "ROOH - Luxury Cosmetics Enterprise Platform",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Abdulrahman"
+}
