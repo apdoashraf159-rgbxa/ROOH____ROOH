@@ -46,22 +46,27 @@ class RoohDatabase {
     const local = this.getLocalDB();
     if (local) {
       local.users = local.users || [];
-      if (!local.users.some(u => u.username === 'aboudi')) {
-        local.users.unshift({
-          id: 'USR-001',
-          name: 'عبدالرحمن (عبودي)',
-          username: 'aboudi',
-          password: 'Aboudi@2026',
-          role: 'Owner',
-          role_ar: 'المالك والمدير العام (عبودي)',
-          phone: '01227208589',
-          is_master: true,
-          permissions: ['all'],
-          status: 'Active',
-          created_at: new Date().toISOString()
-        });
-        this.saveLocalDB(local);
+      const masterIdx = local.users.findIndex(u => u.is_master || u.id === 'USR-001' || u.username === 'admin');
+      const cleanMaster = {
+        id: 'USR-001',
+        name: 'المدير العام',
+        username: 'admin',
+        password: 'Admin@2026',
+        role: 'Owner',
+        role_ar: 'المدير العام',
+        phone: '01227208589',
+        avatar: '👑',
+        is_master: true,
+        permissions: ['all'],
+        status: 'Active',
+        created_at: new Date().toISOString()
+      };
+      if (masterIdx !== -1) {
+        local.users[masterIdx] = { ...local.users[masterIdx], ...cleanMaster };
+      } else {
+        local.users.unshift(cleanMaster);
       }
+      this.saveLocalDB(local);
     }
 
     this.initialized = true;
@@ -801,9 +806,9 @@ class RoohDatabase {
       }
     }
 
-    // 2. Master Owner Verification (Aboudi / Abdelrahman / Admin / Phone)
-    const masterAliases = ['aboudi', 'عبودي', 'abdulrahman', 'abdelrahman', 'admin', 'مالك', '01227208589'];
-    const masterPasswords = ['Aboudi@2026', 'admin', '123456', 'aboudi', '01227208589'];
+    // 2. Master Owner Verification (المدير العام)
+    const masterAliases = ['admin', 'المدير', 'مدير', 'manager', 'owner', '01227208589'];
+    const masterPasswords = ['Admin@2026', 'admin', '123456', 'Admin123', '01227208589'];
 
     const db = this.getLocalDB() || (typeof window !== 'undefined' ? window.ROOH_SEED_DATA : null);
     const usersList = db?.users || [];
@@ -815,18 +820,18 @@ class RoohDatabase {
     if (isMasterUser && isMasterPass) {
       const ownerUser = {
         id: masterUserInDb?.id || 'USR-001',
-        name: masterUserInDb?.name || 'عبدالرحمن (عبودي)',
-        username: masterUserInDb?.username || 'aboudi',
+        name: masterUserInDb?.name || 'المدير العام',
+        username: masterUserInDb?.username || 'admin',
         role: 'Owner',
-        role_ar: masterUserInDb?.role_ar || 'المالك والمدير العام (عبودي)',
+        role_ar: masterUserInDb?.role_ar || 'المدير العام',
         phone: masterUserInDb?.phone || '01227208589',
         avatar: masterUserInDb?.avatar || '👑',
         is_master: true,
         permissions: ['all']
       };
       localStorage.setItem('rooh_auth_user', JSON.stringify(ownerUser));
-      localStorage.setItem('rooh_auth_token', `rooh_auth_aboudi_${Date.now()}_local`);
-      return { success: true, user: ownerUser, token: `rooh_auth_aboudi_${Date.now()}_local` };
+      localStorage.setItem('rooh_auth_token', `rooh_auth_admin_${Date.now()}_local`);
+      return { success: true, user: ownerUser, token: `rooh_auth_admin_${Date.now()}_local` };
     }
 
     // 3. Assistants / Staff Verification

@@ -466,26 +466,21 @@
     </div>
 
     <div class="container footer-bottom">
-      <div>جميع الحقوق محفوظة © 2026 شركة روح للمستحضرات التجميل (ROOH) | إشراف: عبدالرحمن</div>
+      <div>جميع الحقوق محفوظة © 2026 شركة روح للمستحضرات التجميل (ROOH) | إشراف: الإدارة العامة</div>
       <div style="display:flex; align-items:center; gap:20px;">
         <span>سجل تجاري: CR-74892-CAIRO | بطاقة ضريبية: EG-893-482-109</span>
-        <!-- Hidden Owner Link (تحت خالص ع الشمال) -->
-        <a href="login.html" id="footerAboudiLink"
-          style="font-size: 0.85rem; color: rgba(239, 233, 223, 0.45); text-decoration: none; font-weight: 700; transition: all 0.3s ease; padding: 4px 8px; border-radius: 4px;"
-          onmouseover="this.style.color='var(--rooh-gold)'; this.style.background='rgba(255,255,255,0.06)'" onmouseout="this.style.color='rgba(239, 233, 223, 0.45)'; this.style.background='transparent'">
-          عبودي
-        </a>
       </div>
     </div>
   </footer>
 
-  <!-- Fixed Stealth Link at Absolute Bottom-Left (تحت خالص ع الشمال - سهل اللمس والفتح من الموبايل والكمبيوتر) -->
-  <div style="position: fixed; bottom: 8px; left: 10px; z-index: 999999;">
-    <a href="login.html" id="stealthAboudiBtn" title="بوابة الإدارة الخاصة (عبودي)"
-      style="display: inline-flex; align-items: center; justify-content: center; min-height: 36px; min-width: 46px; font-size: 0.82rem; color: rgba(110, 104, 95, 0.55); text-decoration: none; font-weight: 800; padding: 5px 12px; border-radius: 8px; background: rgba(255, 255, 255, 0.75); backdrop-filter: blur(4px); box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: all 0.3s ease; user-select: none;"
-      onmouseover="this.style.color='#FFF'; this.style.background='rgba(36,33,30,0.95)';"
-      onmouseout="this.style.color='rgba(110, 104, 95, 0.55)'; this.style.background='rgba(255, 255, 255, 0.75)';">
-      عبودي
+  <!-- Fixed Manager Portal Button at Bottom-Right (تحت على اليمين - لوحة تحكم المدير) -->
+  <div style="position: fixed; bottom: 18px; right: 18px; z-index: 999999;">
+    <a href="login.html" id="managerPortalBtn" title="لوحة تحكم المدير"
+      style="display: inline-flex; align-items: center; gap: 8px; min-height: 42px; padding: 8px 18px; font-size: 0.95rem; font-weight: 800; color: #FFF; background: linear-gradient(135deg, #1E1B18 0%, #2D2722 100%); border: 1.5px solid var(--rooh-gold); border-radius: 50px; box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35); text-decoration: none; transition: all 0.3s ease; user-select: none;"
+      onmouseover="this.style.background='var(--rooh-gold)'; this.style.color='#1E1B18'; this.style.transform='translateY(-2px)';"
+      onmouseout="this.style.background='linear-gradient(135deg, #1E1B18 0%, #2D2722 100%)'; this.style.color='#FFF'; this.style.transform='translateY(0)';">
+      <span style="font-size:1.1rem;">🔐</span>
+      <span>المدير</span>
     </a>
   </div>
 

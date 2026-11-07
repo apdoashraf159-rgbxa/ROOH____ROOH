@@ -783,8 +783,8 @@ const server = http.createServer(async (req, res) => {
           const newMsg = {
             id: `MSG-${Date.now()}`,
             sender_id: body.sender_id || 'USR-001',
-            sender_name: body.sender_name || 'عبدالرحمن (عبودي)',
-            sender_role: body.sender_role || 'المالك والمدير العام',
+            sender_name: body.sender_name || 'المدير العام',
+            sender_role: body.sender_role || 'المدير العام',
             sender_avatar: body.sender_avatar || '👑',
             text: body.text || '',
             timestamp: new Date().toISOString()
@@ -831,8 +831,8 @@ const server = http.createServer(async (req, res) => {
         const passEntered = (body.password || '').trim();
 
         const users = db.users || [];
-        const isMasterAlias = ['aboudi', 'عبودي', 'abdulrahman', 'abdelrahman', 'admin', 'مالك', '01227208589'].includes(userEntered);
-        const isMasterPass = ['Aboudi@2026', 'admin', '123456', 'aboudi', '01227208589'].includes(passEntered);
+        const isMasterAlias = ['admin', 'المدير', 'مدير', 'manager', 'owner', '01227208589'].includes(userEntered);
+        const isMasterPass = ['Admin@2026', 'admin', '123456', 'Admin123', '01227208589'].includes(passEntered);
 
         // Find matching account
         let matched = users.find(u => {
@@ -846,10 +846,10 @@ const server = http.createServer(async (req, res) => {
         if (!matched && isMasterAlias && isMasterPass) {
           matched = users.find(u => u.is_master) || {
             id: 'USR-001',
-            name: 'عبدالرحمن (عبودي)',
-            username: 'aboudi',
+            name: 'المدير العام',
+            username: 'admin',
             role: 'Owner',
-            role_ar: 'المالك والمدير العام (عبودي)',
+            role_ar: 'المدير العام',
             phone: '01227208589',
             is_master: true,
             permissions: ['all']
@@ -877,7 +877,7 @@ const server = http.createServer(async (req, res) => {
             name: matched.name,
             username: matched.username,
             role: matched.role,
-            role_ar: matched.role_ar || (matched.is_master ? 'المالك والمدير العام (عبودي)' : 'مساعد'),
+            role_ar: matched.role_ar || (matched.is_master ? 'المدير العام' : 'مساعد'),
             avatar: matched.avatar || (matched.is_master ? '👑' : '👤'),
             phone: matched.phone || '',
             is_master: !!matched.is_master,
@@ -1027,7 +1027,7 @@ server.listen(PORT, '0.0.0.0', () => {
   const localIPs = getLocalIPs();
   console.log(`=======================================================================`);
   console.log(`  👑 منظومة روح المتكاملة لمستحضرات التجميل تعمل بنجاح! ROOH Live Engine `);
-  console.log(`  المالك والمدير العام: عبدالرحمن (01227208589)                           `);
+  console.log(`  المدير العام: إدارة روح لمستحضرات التجميل (01227208589)                           `);
   console.log(`=======================================================================`);
   console.log(`  [1] الدخول من الكمبيوتر (Desktop):                                   `);
   console.log(`      • المتجر والموقع:  http://localhost:${PORT}                      `);

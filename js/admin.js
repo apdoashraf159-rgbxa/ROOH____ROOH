@@ -81,7 +81,7 @@ class RoohAdmin {
       root.innerHTML = `
         <div style="text-align:center; padding:80px 20px; background:#FFF; border-radius:16px; border:1px solid #FFCDD2;">
           <div style="font-size:3.5rem; margin-bottom:16px;">🚫</div>
-          <h2 style="color:var(--rooh-danger); font-size:1.6rem; margin-bottom:8px;">عذراً، هذا القسم سري ومخصص فقط للمدير الأساسي عبدالرحمن</h2>
+          <h2 style="color:var(--rooh-danger); font-size:1.6rem; margin-bottom:8px;">عذراً، هذا القسم سري ومخصص فقط للمدير الأساسي المدير العام</h2>
           <p style="color:var(--rooh-muted); max-width:500px; margin:0 auto 24px;">لا تملك صلاحية الوصول إلى الخزنة أو الإعدادات المالية والأمنية المتقدمة.</p>
           <a href="#overview" class="btn-rooh btn-rooh-primary">العودة للرئيسية</a>
         </div>
@@ -248,7 +248,7 @@ class RoohAdmin {
       <div style="background:linear-gradient(135deg, var(--rooh-dark) 0%, #362F27 100%); color:#FFF; padding:28px 32px; border-radius:18px; border:1px solid var(--rooh-gold); margin-bottom:28px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
         <div>
           <span style="font-size:0.8rem; color:var(--rooh-gold); font-weight:700; letter-spacing:1px; text-transform:uppercase;">لوحة التحكم المركزية المعتمدة</span>
-          <h2 style="font-family:var(--rooh-font-serif); font-size:1.8rem; margin:6px 0 8px;">مرحباً بك يا أستاذ ${user?.name || 'عبدالرحمن'} 👑</h2>
+          <h2 style="font-family:var(--rooh-font-serif); font-size:1.8rem; margin:6px 0 8px;">مرحباً بك يا أستاذ ${user?.name || 'المدير العام'} 👑</h2>
           <p style="font-size:0.9rem; color:#DDD4C5; margin:0;">
             منظومة روح تعمل بكامل طاقتها. كافة طلبات المتجر، المحافظات الـ27، والخزنة والذكاء الاصطناعي متصلة ومحدثة.
           </p>
@@ -1170,7 +1170,7 @@ class RoohAdmin {
           <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:20px;">
             <div>
               <span style="background:rgba(255,215,0,0.2); color:#FFD700; padding:4px 12px; border-radius:50px; font-size:0.78rem; font-weight:700; letter-spacing:1px; display:inline-block; margin-bottom:8px;">
-                🔐 قسم الخزنة السري – مصرح فقط للمدير الأساسي عبدالرحمن
+                🔐 قسم الخزنة السري – مصرح فقط للمدير الأساسي المدير العام
               </span>
               <h2 style="font-family:var(--rooh-font-serif); font-size:1.8rem; margin:0 0 8px; color:#FFF;">
                 الخزنة المركزية وتفاصيل الحسابات والمعاملات المالية
@@ -1495,7 +1495,7 @@ class RoohAdmin {
 
     root.innerHTML = `
       <div style="background:#FFF; padding:20px; border-radius:14px; border:1px solid var(--admin-border); margin-bottom:24px;">
-        <span style="background:rgba(255,215,0,0.2); color:var(--rooh-dark); padding:3px 10px; border-radius:50px; font-size:0.75rem; font-weight:700;">سري للمدير الأساسي عبدالرحمن</span>
+        <span style="background:rgba(255,215,0,0.2); color:var(--rooh-dark); padding:3px 10px; border-radius:50px; font-size:0.75rem; font-weight:700;">سري للمدير الأساسي المدير العام</span>
         <h2 style="font-family:var(--rooh-font-serif); font-size:1.4rem; color:var(--rooh-dark); margin:6px 0 4px;">إعدادات الربط المالي وبوابات الدفع الإلكتروني</h2>
         <p style="font-size:0.85rem; color:var(--rooh-muted); margin:0;">
           تحكم في حسابات التاجر، ربط مفاتيح API، روابط Webhook، اختبار الاتصال والتفعيل بين وضع التجربة (Sandbox) والإنتاج الحي (Live).
@@ -3342,7 +3342,7 @@ class RoohAdmin {
   // =========================================================================
   async renderMeetings(root) {
     const data = await window.roohDB.getTeamMeetings() || { messages: [], participants: [] };
-    const currentUser = window.roohDB.getCurrentUser() || { id: 'USR-001', name: 'عبدالرحمن', role_ar: 'المالك والمدير العام' };
+    const currentUser = window.roohDB.getCurrentUser() || { id: 'USR-001', name: 'المدير العام', role_ar: 'المالك والمدير العام' };
 
     root.innerHTML = `
       <div class="chat-room-layout">
@@ -3461,7 +3461,7 @@ class RoohAdmin {
     if (!text) return;
     inputEl.value = '';
 
-    const currentUser = window.roohDB.getCurrentUser() || { id: 'USR-001', name: 'عبدالرحمن', role_ar: 'المالك والمدير العام' };
+    const currentUser = window.roohDB.getCurrentUser() || { id: 'USR-001', name: 'المدير العام', role_ar: 'المالك والمدير العام' };
 
     const newMsg = {
       sender_id: currentUser.id,
@@ -3505,7 +3505,7 @@ class RoohAdmin {
     root.innerHTML = `
       <div style="background:#FFF; padding:20px; border-radius:14px; border:1px solid var(--admin-border); margin-bottom:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
         <div>
-          <span style="background:rgba(255,215,0,0.2); color:var(--rooh-dark); padding:3px 10px; border-radius:50px; font-size:0.75rem; font-weight:700;">سري للمدير الأساسي عبدالرحمن</span>
+          <span style="background:rgba(255,215,0,0.2); color:var(--rooh-dark); padding:3px 10px; border-radius:50px; font-size:0.75rem; font-weight:700;">سري للمدير الأساسي المدير العام</span>
           <h2 style="font-family:var(--rooh-font-serif); font-size:1.35rem; color:var(--rooh-dark); margin:6px 0 4px;">إدارة المديرين والمساعدين وتوزيع الصلاحيات (RBAC)</h2>
           <p style="font-size:0.85rem; color:var(--rooh-muted); margin:0;">إضافة حسابات المساعدين، تحديد الصلاحيات المخصصة، مع حظر كامل للوصول إلى الخزنة.</p>
         </div>
@@ -3701,7 +3701,7 @@ class RoohAdmin {
         <div style="background:#FFF; padding:18px; border-radius:12px; border:1px solid var(--admin-border);">
           <div style="font-size:0.8rem; color:var(--rooh-muted);">عزل الخزنة المالية</div>
           <div style="font-weight:700; color:#2E7D32; font-size:1.1rem; margin-top:4px;">محمية من السيرفر 100% ✓</div>
-          <div style="font-size:0.75rem; color:var(--rooh-muted);">حظر تام لأي مستخدم غير عبدالرحمن</div>
+          <div style="font-size:0.75rem; color:var(--rooh-muted);">حظر تام لأي مستخدم غير المدير العام</div>
         </div>
 
         <div style="background:#FFF; padding:18px; border-radius:12px; border:1px solid var(--admin-border);">
@@ -3749,7 +3749,7 @@ class RoohAdmin {
           <div>
             <h3 style="color:#C62828; font-size:1.15rem; margin:0 0 4px;">⚠️ تصفير الموقع والبدء من الصفر (القسم 2)</h3>
             <p style="font-size:0.85rem; color:var(--rooh-muted); margin:0; max-width:650px;">
-              حذف كافة الطلبات، العملاء، قيود اليومية، والإحصائيات القديمة والبدء بسجل نظيف تماماً مع إنشاء نسخة احتياطية إلزامية والاحتفاظ بحساب عبدالرحمن والمنتجات والإعدادات.
+              حذف كافة الطلبات، العملاء، قيود اليومية، والإحصائيات القديمة والبدء بسجل نظيف تماماً مع إنشاء نسخة احتياطية إلزامية والاحتفاظ بحساب المدير العام والمنتجات والإعدادات.
             </p>
           </div>
           <button class="btn-rooh" style="background:#C62828; color:#FFF; font-weight:700; padding:10px 20px;" onclick="window.roohAdmin.promptZeroReset()">
@@ -3862,7 +3862,7 @@ class RoohAdmin {
           <div style="flex:1; overflow-y:auto; padding:20px; display:flex; flex-direction:column; gap:14px;" id="adminAIChatLog">
             <div style="display:flex; justify-content:flex-start;">
               <div style="background:var(--rooh-sand-light); color:var(--rooh-dark); padding:16px 20px; border-radius:16px 16px 16px 4px; max-width:85%; line-height:1.7; border:1px solid var(--rooh-border); font-size:0.92rem;">
-                أهلاً بك يا أستاذ <strong>عبدالرحمن</strong>! 👋 أنا معاك وتحت أمرك كأنك قاعد مع شريكك ومستشارك الشخصي بالظبط.<br><br>
+                أهلاً بك يا أستاذ <strong>المدير العام</strong>! 👋 أنا معاك وتحت أمرك كأنك قاعد مع شريكك ومستشارك الشخصي بالظبط.<br><br>
                 تقدر تقولي أي حاجة زي:<br>
                 • <strong>"الساعة 6 فكرني بأوردر عميل المعادي"</strong> ⏰ (وهبعتلك رنة منبه في الوقت بالظبط)<br>
                 • <strong>"فاكر الموضوع اللي كنا بنتكلم فيه؟"</strong> 🧠 (وهستحضر كل اللي اتفقنا عليه قبل كده)<br>
@@ -4137,7 +4137,7 @@ class RoohAdmin {
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
           <div>
             <label class="form-label">اسم المالك والمدير العام:</label>
-            <input type="text" id="gsOwnerName" class="form-input" value="${s.company_owner_ar || 'عبدالرحمن'}" />
+            <input type="text" id="gsOwnerName" class="form-input" value="${s.company_owner_ar || 'المدير العام'}" />
           </div>
           <div>
             <label class="form-label">رقم هاتف الإدارة المعتمد:</label>

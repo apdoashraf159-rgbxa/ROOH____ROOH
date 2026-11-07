@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>لوحة التحكم المركزية الشاملة | ROOH Enterprise - عبدالرحمن</title>
+  <title>لوحة تحكم المدير المركزية | ROOH Enterprise</title>
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/rooh-luxury.css">
   <link rel="stylesheet" href="css/admin.css">
@@ -20,7 +20,7 @@
       <div class="brand-logo-mark" style="width:40px; height:40px; font-size:1.2rem; background:linear-gradient(135deg, var(--rooh-gold), #D4BA7D);">ر</div>
       <div style="flex:1;">
         <h2 style="font-size:1.15rem; margin:0; font-family:var(--rooh-font-serif); color:#FFF;">ROOH ERP</h2>
-        <span style="font-size:0.75rem; color:var(--rooh-sand);">إشراف المالك: عبدالرحمن</span>
+        <span style="font-size:0.75rem; color:var(--rooh-sand);">إشراف: المدير العام</span>
       </div>
       <button class="mobile-close-sidebar-btn" onclick="toggleMobileSidebar(false)">&times;</button>
     </div>
@@ -121,12 +121,12 @@
       </div>
     </div>
 
-    <!-- Logged In User Strip (Abdelrahman) -->
+    <!-- Logged In User Strip (Manager) -->
     <div class="admin-user-footer" onclick="openProfileModal()" title="انقر لتعديل بياناتك وكلمة المرور">
       <div class="admin-user-avatar" id="adminUserAvatar">👑</div>
       <div class="admin-user-info">
-        <span class="admin-user-name" id="adminUserName">عبدالرحمن</span>
-        <span class="admin-user-role" id="adminUserRole">المدير الأساسي والمالك</span>
+        <span class="admin-user-name" id="adminUserName">المدير العام</span>
+        <span class="admin-user-role" id="adminUserRole">المدير العام</span>
       </div>
       <span style="font-size:0.8rem; color:var(--rooh-gold);">✏️</span>
     </div>
@@ -208,7 +208,7 @@
     <div class="modal-content" style="max-width:520px;">
       <button class="modal-close-btn" onclick="document.getElementById('profileEditModal').classList.remove('open')">&times;</button>
       <h3 style="font-family:var(--rooh-font-serif); font-size:1.35rem; color:var(--rooh-dark); margin-bottom:18px;">
-        تعديل بيانات حساب المدير الأساسي عبدالرحمن
+        تعديل بيانات حساب المدير العام
       </h3>
       <form id="profileEditForm" onsubmit="handleProfileUpdateSubmit(event)" style="display:flex; flex-direction:column; gap:14px;">
         <div>
@@ -281,8 +281,8 @@
       const nameEl = document.getElementById('adminUserName');
       const roleEl = document.getElementById('adminUserRole');
       const avatarEl = document.getElementById('adminUserAvatar');
-      if (nameEl) nameEl.textContent = user.name || 'عبدالرحمن';
-      if (roleEl) roleEl.textContent = user.role_ar || (user.is_master ? 'المدير الأساسي والمالك' : 'مساعد');
+      if (nameEl) nameEl.textContent = user.name || 'المدير العام';
+      if (roleEl) roleEl.textContent = user.role_ar || (user.is_master ? 'المدير العام' : 'مساعد');
       if (avatarEl) {
         if (user.avatar && (user.avatar.startsWith('data:image') || user.avatar.startsWith('http'))) {
           avatarEl.innerHTML = `<img src="${user.avatar}" alt="${user.name}" style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />`;
@@ -324,7 +324,7 @@
 
     function openProfileModal() {
       const user = window.roohDB?.getCurrentUser() || {};
-      document.getElementById('profNameInput').value = user.name || 'عبدالرحمن';
+      document.getElementById('profNameInput').value = user.name || 'المدير العام';
       document.getElementById('profPhoneInput').value = user.phone || '01227208589';
       document.getElementById('profAvatarInput').value = user.avatar || '👑';
       document.getElementById('profNewPassInput').value = '';

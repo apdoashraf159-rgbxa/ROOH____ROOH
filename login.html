@@ -102,29 +102,29 @@
 <body>
 
   <div class="login-card">
-    <div class="login-brand-logo">ر</div>
+    <div class="login-brand-logo">👑</div>
     <h2 style="font-family:var(--rooh-font-serif); font-size:1.8rem; color:var(--rooh-dark); margin-bottom:4px;">
-      ROOH – روح
+      لوحة تحكم المدير
     </h2>
     <p style="font-size:0.85rem; color:var(--rooh-muted); margin-bottom:24px;">
-      بوابة الدخول الآمنة للوحة التحكم المركزية
+      بوابة الدخول الآمنة لإدارة متجر ومنظومة روح
     </p>
 
     <div class="error-banner" id="errorBanner"></div>
 
     <form id="loginForm" onsubmit="handleLoginSubmit(event)">
       <div class="form-group">
-        <label class="form-label" for="loginUsername">اسم المستخدم أو رقم الهاتف:</label>
-        <input type="text" id="loginUsername" class="form-input" placeholder="اسم المستخدم أو الهاتف" required autocomplete="username" autofocus />
+        <label class="form-label" for="loginUsername">اسم مستخدم المدير أو الهاتف:</label>
+        <input type="text" id="loginUsername" class="form-input" placeholder="admin أو المدير أو رقم هاتفك" required autocomplete="username" autofocus />
       </div>
 
       <div class="form-group">
-        <label class="form-label" for="loginPassword">كلمة المرور (Password):</label>
+        <label class="form-label" for="loginPassword">كلمة المرور:</label>
         <input type="password" id="loginPassword" class="form-input" placeholder="••••••••" required autocomplete="current-password" />
       </div>
 
       <button type="submit" class="btn-rooh btn-rooh-primary" id="loginBtn" style="width:100%; padding:15px; font-size:1.05rem; margin-top:8px; border-radius:50px;">
-        <span>تسجيل الدخول للوحة التحكم</span>
+        <span>تسجيل الدخول إلى لوحة المدير</span>
         <span>🔐</span>
       </button>
     </form>
