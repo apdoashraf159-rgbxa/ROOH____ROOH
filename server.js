@@ -58,8 +58,11 @@ function readDB() {
   }
 }
 
+let currentDbVersion = Date.now();
+
 function writeDB(data) {
   try {
+    currentDbVersion = Date.now();
     fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2), 'utf8');
     // Also sync to seed.js for seamless client-side bootstrap
     const seedPath = path.join(__dirname, 'data', 'seed.js');
@@ -322,7 +325,10 @@ const server = http.createServer(async (req, res) => {
     }
 
     try {
-      // 1. Full Database Dump & Unified Global Save
+      // 1. Full Database Dump & Unified Global Save & Live Version Check
+      if (pathname === '/api/db/version' && method === 'GET') {
+        return sendJSON(res, 200, { version: currentDbVersion });
+      }
       if (pathname === '/api/db' && method === 'GET') {
         return sendJSON(res, 200, db);
       }

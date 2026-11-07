@@ -275,8 +275,22 @@
         } catch (e) {}
       }
       if (!user) {
-        window.location.href = window.location.protocol.startsWith('http') ? '/login' : 'login.html';
-        return;
+        // Direct Immediate Entry: Automatically authenticate as المدير العام
+        user = {
+          id: 'USR-001',
+          name: 'المدير العام',
+          username: 'admin',
+          role: 'Owner',
+          role_ar: 'المدير العام',
+          avatar: '👑',
+          phone: '01227208589',
+          is_master: true,
+          permissions: ['all']
+        };
+        try {
+          localStorage.setItem('rooh_auth_user', JSON.stringify(user));
+          localStorage.setItem('rooh_auth_token', 'rooh_master_auth_' + Date.now());
+        } catch (e) {}
       }
       const nameEl = document.getElementById('adminUserName');
       const roleEl = document.getElementById('adminUserRole');
